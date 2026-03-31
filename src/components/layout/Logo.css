@@ -38,10 +38,6 @@
     opacity 0.35s ease 0.08s;
 }
 
-.logo:hover .logo-bracket--left {
-  transform: translateX(-4px);
-}
-
 .logo:hover .logo-bracket--right {
   transform: translateX(4px);
 }

@@ -16,7 +16,6 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/work" element={<Work />} />
         <Route path="/about" element={<About />} />
         <Route path="/work/error-series" element={<ErrorSeries />} />
         <Route path="/work/saas-platform" element={<SaasPlatform />} />
