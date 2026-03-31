@@ -4,7 +4,8 @@ import "./Nav.css";
 
 function Nav() {
   return (
-    <header className="nav-header">
+    <header className="nav-header"
+    style={{backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)'}}>
       <nav className="nav-inner">
         <Logo />
         <div className="nav-center">
