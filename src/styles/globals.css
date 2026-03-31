@@ -32,3 +32,137 @@ video {
   max-width: 100%;
   display: block;
 }
+
+.typed-headline {
+  font-family: var(--font-mono);
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--color-dark);
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.8em;
+  background: var(--color-dark);
+  margin-left: 3px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: blink 1s step-end infinite;
+}
+
+.name-line {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--color-dark);
+  opacity: 0.6;
+  margin-bottom: 16px;
+}
+
+.bio {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-dark);
+  opacity: 0.6;
+  max-width: 440px;
+  margin-bottom: 56px;
+}
+
+.work-section {
+  transform: none;
+}
+
+.work-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.work-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  opacity: 0.4;
+  white-space: nowrap;
+}
+
+.work-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 0.5px solid var(--color-dark);
+  gap: 16px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.work-row:first-of-type {
+  border-top: 0.5px solid var(--color-dark);
+}
+
+.work-row:hover {
+  opacity: 0.5;
+}
+
+.row-num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-dark);
+  opacity: 0.4;
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.row-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--color-dark);
+  flex: 1;
+}
+
+.row-title.featured {
+  font-style: italic;
+}
+
+.row-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  opacity: 0.5;
+  border: 0.5px solid var(--color-dark);
+  padding: 3px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.row-arrow {
+  font-size: 13px;
+  color: var(--color-dark);
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.work-row:hover .row-arrow {
+  opacity: 0.5;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
