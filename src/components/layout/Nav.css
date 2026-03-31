@@ -7,8 +7,6 @@
   isolation: isolate;
   /* TODO: replace with rgba(var(--color-neutral-rgb), 0.75) in tokens phase */
   background: rgba(245, 245, 240, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 

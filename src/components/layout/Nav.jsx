@@ -5,6 +5,7 @@ import "./Nav.css";
 function Nav() {
   return (
     <header className="nav-header"
+    {/* backdrop-filter inline — Tailwind build overrides CSS version, revisit in tokens phase */}
     style={{backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)'}}>
       <nav className="nav-inner">
         <Logo />
