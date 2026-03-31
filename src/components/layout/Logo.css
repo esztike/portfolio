@@ -1,0 +1,63 @@
+.logo {
+  display: inline-flex;
+  align-items: baseline;
+  text-decoration: none;
+  color: inherit;
+  font-family: "DM Mono", monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-bracket {
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-name {
+  display: inline-flex;
+  align-items: baseline;
+  overflow: hidden;
+}
+
+.logo-e {
+  display: inline-block;
+}
+
+.logo-full {
+  display: inline-block;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition:
+    max-width 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s ease 0.08s;
+}
+
+.logo:hover .logo-bracket--left {
+  transform: translateX(-4px);
+}
+
+.logo:hover .logo-bracket--right {
+  transform: translateX(4px);
+}
+
+.logo:hover .logo-full {
+  max-width: 200px;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-bracket,
+  .logo-full {
+    transition: none;
+  }
+  .logo .logo-full {
+    max-width: 200px;
+    opacity: 1;
+  }
+}
