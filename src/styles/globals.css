@@ -35,12 +35,12 @@ video {
 
 .typed-headline {
   font-family: var(--font-mono);
-  font-size: 52px;
+  font-size: 60px;
   font-weight: 500;
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--color-dark);
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   min-height: 60px;
 }
 
@@ -57,20 +57,20 @@ video {
 
 .name-line {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 21px;
   color: var(--color-dark);
-  opacity: 0.6;
-  margin-bottom: 16px;
+  opacity: 0.75;
+  margin-bottom: 24px;
 }
 
 .bio {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
   color: var(--color-dark);
-  opacity: 0.6;
+  opacity: 0.75;
   max-width: 440px;
-  margin-bottom: 56px;
+  margin-bottom: 72px;
 }
 
 .work-section {
@@ -86,11 +86,11 @@ video {
 
 .work-label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-dark);
-  opacity: 0.4;
+  opacity: 0.6;
   white-space: nowrap;
 }
 
@@ -113,12 +113,21 @@ video {
 }
 
 .row-num {
-  font-family: var(--font-mono);
-  font-size: 10px;
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 400;
   color: var(--color-dark);
-  opacity: 0.4;
-  width: 20px;
+  opacity: 0.08;
+  width: 64px;
   flex-shrink: 0;
+  line-height: 1;
+}
+
+.row-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
 }
 
 .row-title {
@@ -130,6 +139,13 @@ video {
 
 .row-title.featured {
   font-style: italic;
+}
+
+.row-subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-dark);
+  opacity: 0.45;
 }
 
 .row-tag {
