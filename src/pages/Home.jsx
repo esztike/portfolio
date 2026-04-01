@@ -133,13 +133,12 @@ function Home() {
           <span className="terminal-title">eszti@portfolio ~ %</span>
         </div>
         <div ref={headlineRef} className="typed-headline"></div>
+        <p className="bio">
+          <span className="bio-name">&lt;eszti&gt;</span> designs systems and
+          builds interfaces, working at the intersection of research, systems
+          thinking, and frontend code.
+        </p>
       </div>
-
-      <p className="bio">
-        <span className="bio-name">&lt;eszti&gt;</span> designs systems and
-        builds interfaces, working at the intersection of research, systems
-        thinking, and frontend code.
-      </p>
 
       <div className="work-section">
         <span className="work-label">Selected projects</span>
