@@ -125,17 +125,24 @@ function Home() {
         margin: "0 auto",
       }}
     >
-      <div ref={headlineRef} className="typed-headline"></div>
-
-      <p className="name-line">Eszti Hollenback</p>
+      <div className="terminal">
+        <div className="terminal-bar">
+          <span className="terminal-dot dot-red"></span>
+          <span className="terminal-dot dot-yellow"></span>
+          <span className="terminal-dot dot-green"></span>
+          <span className="terminal-title">eszti@portfolio ~ %</span>
+        </div>
+        <div ref={headlineRef} className="typed-headline"></div>
+      </div>
 
       <p className="bio">
-        I design systems and build interfaces — working at the intersection of
-        research, systems thinking, and frontend code.
+        <span className="bio-name">&lt;eszti&gt;</span> designs systems and
+        builds interfaces, working at the intersection of research, systems
+        thinking, and frontend code.
       </p>
 
       <div className="work-section">
-        <span className="work-label">/work</span>
+        <span className="work-label">Selected projects</span>
         {projects.map((project, i) => (
           <motion.div
             key={project.path}

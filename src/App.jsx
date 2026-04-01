@@ -24,6 +24,9 @@ function App() {
         <Route path="/work/globo" element={<Globo />} />
         <Route path="/work/home-glamour" element={<HomeGlamour />} />
       </Routes>
+      <footer className="site-footer">
+        <p>© Eszti Hollenback 2026</p>
+      </footer>
     </BrowserRouter>
   );
 }
