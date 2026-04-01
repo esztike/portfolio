@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 
@@ -63,6 +65,58 @@ function Home() {
     return () => clearTimeout(timeout);
   }, []);
 
+  const projects = [
+    {
+      num: "01",
+      title: "Error Series",
+      subtitle: "Designing for human recovery in agentic AI systems",
+      tags: ["UX", "AI"],
+      color: "#d4e8d0",
+      path: "/work/error-series",
+      featured: true,
+    },
+    {
+      num: "02",
+      title: "Scalable SaaS Platform",
+      subtitle: "End-to-end UX for a Deloitte Digital enterprise product",
+      tags: ["UX"],
+      color: "#d0dff5",
+      path: "/work/saas-platform",
+    },
+    {
+      num: "03",
+      title: "Shared Language",
+      subtitle: "Building a design system for a 200-person product team",
+      tags: ["UX", "Dev"],
+      color: "#f5e6d0",
+      path: "/work/shared-language",
+    },
+    {
+      num: "04",
+      title: "Give InKind",
+      subtitle: "Mobile-first redesign for a real-world nonprofit platform",
+      tags: ["UX"],
+      color: "#f0d0d0",
+      path: "/work/give-inkind",
+    },
+    {
+      num: "05",
+      title: "Travel Better: Globo",
+      subtitle: "Intentional research and emotionally intelligent UX in motion",
+      tags: ["UX"],
+      color: "#e8d4f0",
+      path: "/work/globo",
+    },
+    {
+      num: "06",
+      title: "Home Glamour",
+      subtitle: "A mobile app concept for home styling and personalisation",
+      tags: ["UX"],
+      color: "#f0f0d0",
+      path: "/work/home-glamour",
+    },
+  ];
+
   return (
     <div
       style={{ padding: "40px 48px 52px", maxWidth: "900px", margin: "0 auto" }}
@@ -77,53 +131,46 @@ function Home() {
       </p>
 
       <div className="work-section">
-        <div className="work-header">
-          <span className="work-label">Selected work</span>
-        </div>
-        <Link to="/work/error-series" className="work-row">
-          <span className="row-num">01</span>
-          <span className="row-title-group">
-            <span className="row-title featured">Error Series</span>
-            <span className="row-subtitle">
-              Designing for human recovery in agentic AI systems
-            </span>
-          </span>
-          <span className="row-tag">UX · AI</span>
-          <span className="row-arrow">→</span>
-        </Link>
-        <Link to="/work/saas-platform" className="work-row">
-          <span className="row-num">02</span>
-          <span className="row-title-group">
-            <span className="row-title">Scalable SaaS Platform</span>
-            <span className="row-subtitle">
-              End-to-end UX for a Deloitte Digital enterprise product
-            </span>
-          </span>
-          <span className="row-tag">UX</span>
-          <span className="row-arrow">→</span>
-        </Link>
-        <Link to="/work/shared-language" className="work-row">
-          <span className="row-num">03</span>
-          <span className="row-title-group">
-            <span className="row-title">Shared Language</span>
-            <span className="row-subtitle">
-              Building a design system for a 200-person product team
-            </span>
-          </span>
-          <span className="row-tag">UX · Dev</span>
-          <span className="row-arrow">→</span>
-        </Link>
-        <Link to="/work/give-inkind" className="work-row">
-          <span className="row-num">04</span>
-          <span className="row-title-group">
-            <span className="row-title">Give InKind</span>
-            <span className="row-subtitle">
-              Mobile-first redesign for a real-world nonprofit platform
-            </span>
-          </span>
-          <span className="row-tag">UX</span>
-          <span className="row-arrow">→</span>
-        </Link>
+        <span className="work-label">/work</span>
+        {projects.map((project, i) => (
+          <motion.div
+            key={project.path}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, margin: "-80px" }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+          >
+            <Link to={project.path} className="work-card">
+              <div className="work-card-left">
+                <span className="row-num">{project.num}</span>
+                <div className="work-card-text">
+                  {project.featured && (
+                    <span className="work-card-featured">Featured project</span>
+                  )}
+                  <span
+                    className={`row-title${project.featured ? " featured" : ""}`}
+                  >
+                    {project.title}
+                  </span>
+                  <span className="row-subtitle">{project.subtitle}</span>
+                  <div className="work-card-tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="row-tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>{" "}
+                </div>
+              </div>
+              <motion.div
+                className="work-card-visual"
+                style={{ background: project.color }}
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.3 }}
+              />
+            </Link>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
