@@ -119,7 +119,11 @@ function Home() {
 
   return (
     <div
-      style={{ padding: "40px 48px 52px", maxWidth: "900px", margin: "0 auto" }}
+      style={{
+        padding: "40px 48px 52px",
+        maxWidth: "1200px",
+        margin: "0 auto",
+      }}
     >
       <div ref={headlineRef} className="typed-headline"></div>
 
@@ -131,7 +135,7 @@ function Home() {
       </p>
 
       <div className="work-section">
-        <span className="work-label">/work</span>
+        <span className="work-label">Selected projects</span>
         {projects.map((project, i) => (
           <motion.div
             key={project.path}
