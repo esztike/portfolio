@@ -135,7 +135,7 @@ function Home() {
       </p>
 
       <div className="work-section">
-        <span className="work-label">Selected projects</span>
+        <span className="work-label">/work</span>
         {projects.map((project, i) => (
           <motion.div
             key={project.path}
