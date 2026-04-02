@@ -1,27 +1,29 @@
 .nav-header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
+  width: calc(100% - 48px);
+  max-width: 1200px;
+  border-radius: 14px;
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  background: rgba(1, 64, 41, 0.7);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   isolation: isolate;
-  /* TODO: replace with rgba(var(--color-neutral-rgb), 0.75) in tokens phase */
-  background: rgba(245, 245, 240, 0.6);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 48px;
-  height: 56px;
+  padding: 0 24px;
+  height: 52px;
 }
 
 .nav-center {
   display: flex;
   align-items: center;
-  gap: 8px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -31,42 +33,62 @@
   display: flex;
   align-items: center;
   gap: 2px;
-  background: rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 8px;
   padding: 3px;
 }
 
 .nav-tab {
   font-family: "DM Mono", monospace;
+  font-size: 0.875rem;
   font-weight: 500;
   text-decoration: none;
-  color: inherit;
+  color: var(--color-pink);
   padding: 5px 16px;
   border-radius: 6px;
-  font-size: 0.875rem;
-  transition: background 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .nav-tab.active {
-  background: white;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-neutral);
 }
 
 .nav-socials {
   display: flex;
   align-items: center;
   gap: 16px;
-  color: inherit;
+  color: var(--color-pink);
 }
 
 .nav-socials a {
   display: flex;
   align-items: center;
-  color: inherit;
+  color: var(--color-pink);
   text-decoration: none;
-  opacity: 1;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .nav-socials a:hover {
-  opacity: 0.5;
+  color: var(--color-neutral);
+}
+
+@media (max-width: 800px) {
+  .nav-header {
+    width: calc(100% - 48px);
+    top: 12px;
+  }
+
+  .nav-inner {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-center {
+    position: static;
+    transform: none;
+  }
 }
