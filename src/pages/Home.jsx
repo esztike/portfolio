@@ -139,25 +139,25 @@ function Home() {
           >
             <Link to={project.path} className="work-card">
               <div className="work-card-visual-wrapper">
-                <motion.div
+                <div
                   className="work-card-visual"
                   style={{ background: project.color }}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.3 }}
                 />
                 {project.featured && (
                   <span className="work-card-badge">Featured</span>
                 )}
-                <div className="work-card-text">
-                  <span className="row-title">{project.title}</span>
-                  <span className="row-subtitle">{project.subtitle}</span>
-                  <div className="work-card-tags">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="row-tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+              </div>
+              <div className="work-card-text">
+                <span className="row-title">{project.title}</span>
+                <span className="row-subtitle">{project.subtitle}</span>
+                <div className="work-card-tags">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="row-tag">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </Link>
