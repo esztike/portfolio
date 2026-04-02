@@ -119,13 +119,7 @@ function Home() {
         margin: "0 auto",
       }}
     >
-      <div className="terminal">
-        <div className="terminal-bar">
-          <span className="terminal-dot dot-red"></span>
-          <span className="terminal-dot dot-yellow"></span>
-          <span className="terminal-dot dot-green"></span>
-          <span className="terminal-title">eszti@portfolio ~ %</span>
-        </div>
+      <div className="intro">
         <div ref={headlineRef} className="typed-headline"></div>
         <p className="bio">
           <span className="bio-name">&lt;eszti&gt;</span> designs systems and
@@ -133,9 +127,8 @@ function Home() {
           thinking, and frontend code.
         </p>
       </div>
-
-      <div className="work-section">
-        <span className="work-label">Selected projects</span>
+      <span className="work-label">Selected projects</span>
+      <div className="work-grid">
         {projects.map((project, i) => (
           <motion.div
             key={project.path}
@@ -145,17 +138,18 @@ function Home() {
             transition={{ duration: 0.5, delay: i * 0.1 }}
           >
             <Link to={project.path} className="work-card">
-              <div className="work-card-left">
-                <span className="row-num">{project.num}</span>
+              <div className="work-card-visual-wrapper">
+                <motion.div
+                  className="work-card-visual"
+                  style={{ background: project.color }}
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                />
+                {project.featured && (
+                  <span className="work-card-badge">Featured</span>
+                )}
                 <div className="work-card-text">
-                  {project.featured && (
-                    <span className="work-card-featured">Featured project</span>
-                  )}
-                  <span
-                    className={`row-title${project.featured ? " featured" : ""}`}
-                  >
-                    {project.title}
-                  </span>
+                  <span className="row-title">{project.title}</span>
                   <span className="row-subtitle">{project.subtitle}</span>
                   <div className="work-card-tags">
                     {project.tags.map((tag) => (
@@ -163,15 +157,9 @@ function Home() {
                         {tag}
                       </span>
                     ))}
-                  </div>{" "}
+                  </div>
                 </div>
               </div>
-              <motion.div
-                className="work-card-visual"
-                style={{ background: project.color }}
-                whileHover={{ scale: 1.03 }}
-                transition={{ duration: 0.3 }}
-              />
             </Link>
           </motion.div>
         ))}
