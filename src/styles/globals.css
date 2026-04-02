@@ -15,8 +15,8 @@ body {
 
 html {
   font-family: var(--font-body);
-  color: var(--color-dark);
-  background-color: var(--color-neutral);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -29,6 +29,7 @@ h6 {
   font-family: var(--font-display);
   font-weight: 400;
   line-height: 1.1;
+  color: var(--color-text-heading);
 }
 
 img,
@@ -38,12 +39,16 @@ video {
 }
 
 .terminal {
-  background: #1a1a1a;
+  background: linear-gradient(160deg, #014029, #025a3e);
   border-radius: 12px;
   padding: 0;
   margin-bottom: 80px;
   overflow: hidden;
-  min-height: 120px;
+  min-height: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 48px rgba(0, 0, 0, 0.4),
+    0 1px 0 rgba(255, 255, 255, 0.06) inset;
 }
 
 .terminal-bar {
@@ -51,8 +56,8 @@ video {
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
-  background: #2a2a2a;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .terminal-dot {
@@ -81,14 +86,13 @@ video {
 
 .typed-headline {
   font-family: var(--font-mono);
-  font-size: 96px;
-  min-height: 96px;
+  font-size: 56px;
+  min-height: 80px;
   font-weight: 500;
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--color-neutral);
-  margin-bottom: 0;
-  padding: 48px 48px 32px;
+  padding: 36px 48px 24px;
 }
 
 .cursor {
@@ -107,14 +111,14 @@ video {
   font-weight: 600;
   opacity: 1;
   font-size: 24px;
-  color: rgba(255, 255, 255, 1);
+  color: var(--color-text-primary);
 }
 
 .bio {
   font-family: var(--font-body);
   font-size: 24px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-secondary);
   opacity: 0.75;
   max-width: 1200px;
   margin-bottom: 0;
@@ -130,7 +134,7 @@ video {
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-green);
+  color: var(--color-accent);
   opacity: 0.8;
 }
 
@@ -141,16 +145,18 @@ video {
   gap: 48px;
   padding: 32px;
   margin-bottom: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-border-light);
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
   overflow: hidden;
+  background: var(--color-surface);
   transition: border-color 0.2s ease;
 }
 
 .work-card:hover {
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .work-card-left {
@@ -175,8 +181,8 @@ video {
   font-family: var(--font-display);
   font-size: 48px;
   font-weight: 400;
-  color: var(--color-dark);
-  opacity: 0.6;
+  color: var(--color-text-heading);
+  opacity: 1;
   white-space: nowrap;
   display: block;
   margin-top: 24px;
@@ -189,21 +195,10 @@ video {
   flex-wrap: wrap;
 }
 
-.row-num {
-  font-family: var(--font-display);
-  font-size: 64px;
-  font-weight: 400;
-  color: var(--color-dark);
-  opacity: 0.25;
-  width: 64px;
-  flex-shrink: 0;
-  line-height: 1;
-}
-
 .row-title {
   font-family: var(--font-display);
   font-size: 28px;
-  color: var(--color-dark);
+  color: var(--color-text-heading);
   flex: 1;
 }
 
@@ -214,8 +209,8 @@ video {
 .row-subtitle {
   font-family: var(--font-body);
   font-size: 16px;
-  color: var(--color-dark);
-  opacity: 0.75;
+  color: var(--color-text-secondary);
+  opacity: 1;
 }
 
 .row-tag {
@@ -223,9 +218,9 @@ video {
   font-size: 12px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--color-dark);
-  opacity: 0.75;
-  border: 0.5px solid var(--color-dark);
+  color: var(--color-gray);
+  opacity: 1;
+  border: 0.5px solid var(--color-grey);
   padding: 3px 8px;
   border-radius: 4px;
   flex-shrink: 0;
@@ -236,7 +231,7 @@ video {
   padding: 32px 48px;
   font-family: var(--font-mono);
   font-size: 12px;
-  color: var(--color-dark);
+  color: var(--color-text-secondary);
   opacity: 0.8;
 }
 
@@ -270,5 +265,41 @@ video {
   .nav-centre {
     position: static;
     transform: none;
+  }
+}
+
+@media (max-width: 800px) {
+  /* existing work-card rules stay here */
+
+  .typed-headline {
+    font-size: 36px;
+    min-height: 56px;
+    padding: 28px 28px 20px;
+  }
+
+  .bio {
+    font-size: 18px;
+    padding: 12px 28px 32px;
+  }
+
+  .terminal {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typed-headline {
+    font-size: 28px;
+    min-height: 44px;
+    padding: 24px 20px 16px;
+  }
+
+  .bio {
+    font-size: 16px;
+    padding: 10px 20px 28px;
+  }
+
+  .terminal {
+    min-height: 220px;
   }
 }

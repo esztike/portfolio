@@ -67,7 +67,6 @@ function Home() {
 
   const projects = [
     {
-      num: "01",
       title: "Error Series",
       subtitle: "Designing for human recovery in agentic AI systems",
       tags: ["UX", "AI"],
@@ -76,7 +75,6 @@ function Home() {
       featured: true,
     },
     {
-      num: "02",
       title: "Scalable SaaS Platform",
       subtitle: "End-to-end UX for a Deloitte Digital enterprise product",
       tags: ["UX"],
@@ -84,7 +82,6 @@ function Home() {
       path: "/work/saas-platform",
     },
     {
-      num: "03",
       title: "Shared Language",
       subtitle: "Building a design system for a 200-person product team",
       tags: ["UX", "Dev"],
@@ -92,7 +89,6 @@ function Home() {
       path: "/work/shared-language",
     },
     {
-      num: "04",
       title: "Give InKind",
       subtitle: "Mobile-first redesign for a real-world nonprofit platform",
       tags: ["UX"],
@@ -100,7 +96,6 @@ function Home() {
       path: "/work/give-inkind",
     },
     {
-      num: "05",
       title: "Travel Better: Globo",
       subtitle: "Intentional research and emotionally intelligent UX in motion",
       tags: ["UX"],
@@ -108,7 +103,6 @@ function Home() {
       path: "/work/globo",
     },
     {
-      num: "06",
       title: "Home Glamour",
       subtitle: "A mobile app concept for home styling and personalisation",
       tags: ["UX"],
