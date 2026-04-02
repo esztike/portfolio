@@ -137,13 +137,14 @@ function Home() {
             viewport={{ once: false, margin: "-80px" }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
           >
-            <Link to={project.path} className="work-card">
+            <Link
+              to={project.path}
+              className={`work-card${project.featured ? " featured" : ""}`}
+            >
               <div className="work-card-visual-wrapper">
                 <div
                   className="work-card-visual"
                   style={{ background: project.color }}
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.3 }}
                 />
                 {project.featured && (
                   <span className="work-card-badge">Featured</span>

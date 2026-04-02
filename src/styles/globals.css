@@ -98,6 +98,7 @@ video {
   text-transform: uppercase;
   color: var(--color-accent);
   opacity: 0.8;
+  box-shadow: 0 0 80px rgba(242, 213, 196, 0.4);
 }
 
 .work-card {
