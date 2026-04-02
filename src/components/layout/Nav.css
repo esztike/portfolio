@@ -1,3 +1,5 @@
+@import "../../styles/tokens.css";
+
 .nav-header {
   position: fixed;
   top: 16px;
@@ -33,15 +35,16 @@
   display: flex;
   align-items: center;
   gap: 2px;
-  background: rgba(255, 255, 255, 0.06);
+  /* background: rgba(255, 255, 255, 0.06); */
   border-radius: 8px;
   padding: 3px;
+  border: 0.5px solid rgba(242, 213, 196, 0.4);
 }
 
 .nav-tab {
   font-family: "DM Mono", monospace;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   text-decoration: none;
   color: var(--color-pink);
   padding: 5px 16px;
@@ -54,6 +57,7 @@
 .nav-tab.active {
   background: rgba(255, 255, 255, 0.1);
   color: var(--color-neutral);
+  /* border: 0.5px solid var(--color-neutral); */
 }
 
 .nav-socials {
