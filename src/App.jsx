@@ -18,7 +18,7 @@ function App() {
           style={{
             position: "fixed",
             inset: 0,
-            backgroundImage: "url(/src/assets/background-portfolio.jpeg)",
+            backgroundImage: "url(/background-portfolio.jpeg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             opacity: 0.75,
