@@ -57,3 +57,15 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 640px) {
+  .logo-full {
+    display: none;
+  }
+  .logo:hover .logo-full {
+    display: none;
+  }
+  .logo:hover .logo-bracket--right {
+    transform: none;
+  }
+}

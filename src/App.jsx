@@ -13,20 +13,35 @@ import HomeGlamour from "./pages/work/HomeGlamour";
 function App() {
   return (
     <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/work/error-series" element={<ErrorSeries />} />
-        <Route path="/work/saas-platform" element={<SaasPlatform />} />
-        <Route path="/work/shared-language" element={<SharedLanguage />} />
-        <Route path="/work/give-inkind" element={<GiveInkind />} />
-        <Route path="/work/globo" element={<Globo />} />
-        <Route path="/work/home-glamour" element={<HomeGlamour />} />
-      </Routes>
-      <footer className="site-footer">
-        <p>© Eszti Hollenback 2026</p>
-      </footer>
+      <div style={{ position: "relative", minHeight: "100vh" }}>
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            backgroundImage: "url(/src/assets/background-portfolio.jpeg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: 0.75,
+            mixBlendMode: "color-burn",
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/work/error-series" element={<ErrorSeries />} />
+          <Route path="/work/saas-platform" element={<SaasPlatform />} />
+          <Route path="/work/shared-language" element={<SharedLanguage />} />
+          <Route path="/work/give-inkind" element={<GiveInkind />} />
+          <Route path="/work/globo" element={<Globo />} />
+          <Route path="/work/home-glamour" element={<HomeGlamour />} />
+        </Routes>
+        <footer className="site-footer">
+          <p>© Eszti Hollenback 2026</p>
+        </footer>
+      </div>
     </BrowserRouter>
   );
 }
