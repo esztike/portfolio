@@ -49,7 +49,7 @@ video {
   font-weight: 500;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: var(--color-neutral);
+  color: var(--color-text-primary);
   padding: 0 0 24px;
 }
 
@@ -57,7 +57,7 @@ video {
   display: inline-block;
   width: 3px;
   height: 0.8em;
-  background: var(--color-neutral);
+  background: var(--color-text-primary);
   margin-left: 3px;
   vertical-align: middle;
   border-radius: 1px;
@@ -77,7 +77,6 @@ video {
   font-size: 24px;
   line-height: 1.7;
   color: var(--color-text-secondary);
-  opacity: 0.8;
   max-width: 720px;
 }
 
@@ -91,16 +90,6 @@ video {
   gap: 24px;
 }
 
-.work-card-featured {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  opacity: 0.8;
-  box-shadow: 0 0 80px rgba(242, 213, 196, 0.4);
-}
-
 .work-card {
   display: flex;
   flex-direction: column;
@@ -110,7 +99,11 @@ video {
   border-radius: 12px;
   overflow: hidden;
   background: var(--color-surface);
-  border: 0.5px solid rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: 8px 8px 16px 2px var(--color-shadow);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   transition:
     border-color 0.2s ease,
     background 0.2s ease;
@@ -118,7 +111,7 @@ video {
 
 .work-card:hover {
   border-color: var(--color-accent);
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--color-hover);
 }
 
 .work-card-left {
@@ -145,11 +138,11 @@ video {
   top: 12px;
   left: 12px;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #014029;
-  background: var(--color-pink);
+  color: var(--color-accent);
+  background: rgba(242, 204, 143, 0.15);
   padding: 4px 10px;
   border-radius: 4px;
 }
@@ -200,7 +193,7 @@ video {
   font-size: 12px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--color-gray);
+  color: var(--color-grey);
   opacity: 1;
   border: 0.5px solid var(--color-grey);
   padding: 3px 8px;

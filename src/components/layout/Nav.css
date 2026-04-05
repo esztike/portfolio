@@ -9,9 +9,9 @@
   width: calc(100% - 48px);
   max-width: 1200px;
   border-radius: 14px;
-  border: 0.5px solid rgba(255, 255, 255, 0.12);
-  background: rgba(1, 64, 41, 0.7);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px rgba(61, 64, 91, 0.6);
+  background: rgba(61, 64, 91, 0.6);
+  box-shadow: 0 2px 12px 0 var(--color-shadow);
   isolation: isolate;
 }
 
@@ -38,7 +38,7 @@
   /* background: rgba(255, 255, 255, 0.06); */
   border-radius: 8px;
   padding: 3px;
-  border: 0.5px solid rgba(242, 213, 196, 0.4);
+  border: 0.5px solid rgba(224, 122, 87, 0.5);
 }
 
 .nav-tab {
@@ -46,7 +46,7 @@
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  color: var(--color-pink);
+  color: var(--color-yellow);
   padding: 5px 16px;
   border-radius: 6px;
   transition:
@@ -55,8 +55,8 @@
 }
 
 .nav-tab.active {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--color-neutral);
+  background: var(--color-indigo);
+  color: var(--color-accent);
   /* border: 0.5px solid var(--color-neutral); */
 }
 
@@ -64,19 +64,19 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  color: var(--color-pink);
+  color: var(--color-yellow);
 }
 
 .nav-socials a {
   display: flex;
   align-items: center;
-  color: var(--color-pink);
+  color: var(--color-yellow);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .nav-socials a:hover {
-  color: var(--color-neutral);
+  color: var(--color-warm-white);
 }
 
 @media (max-width: 800px) {
