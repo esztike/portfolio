@@ -1,8 +1,49 @@
+import CaseStudyLayout from "../../components/layout/CaseStudyLayout";
+import GloboContent from "../../content/globo.mdx";
+import Slideshow from "../../components/case-study/Slideshow";
+
+const tldr = {
+  project: "Research case study — emotional UX for a travel app concept",
+  role: "UX Designer & Researcher",
+  timeline: "2023",
+  deliverables:
+    "User interviews · Emotional mapping · Travel stressor research · Feature ideation",
+  hook: (
+    <>
+      <p>
+        Travel is one of the most emotionally loaded experiences people choose
+        to put themselves through. And yet most travel apps treat it like a
+        logistics problem.
+      </p>
+      <p>
+        This research went deeper into the anxiety, the coping strategies, the
+        moments where design could actually help.
+      </p>
+      <p>
+        The result is a clear picture of where emotionally intelligent travel
+        design could go, and why it matters.
+      </p>
+    </>
+  ),
+};
+
 function Globo() {
   return (
-    <main>
-      <h1>Globo</h1>
-    </main>
+    <>
+      <CaseStudyLayout
+        title="Travel Better: Globo"
+        heroImage="#e8d4f0"
+        tldr={tldr}
+        otherProjects={[
+          { title: "Shared Language", path: "/work/shared-language" },
+          { title: "Scalable SaaS Platform", path: "/work/saas-platform" },
+          { title: "Give InKind", path: "/work/give-inkind" },
+          { title: "Home Glamour", path: "/work/home-glamour" },
+        ]}
+      >
+        <GloboContent components={{ Slideshow }} />
+      </CaseStudyLayout>
+    </>
   );
 }
 

@@ -75,25 +75,11 @@ function Home() {
       featured: true,
     },
     {
-      title: "Scalable SaaS Platform",
-      subtitle: "End-to-end UX for a Deloitte Digital enterprise product",
-      tags: ["UX"],
-      color: "#d0dff5",
-      path: "/work/saas-platform",
-    },
-    {
       title: "Shared Language",
       subtitle: "Building a design system for a 200-person product team",
       tags: ["UX", "Dev"],
       color: "#f5e6d0",
       path: "/work/shared-language",
-    },
-    {
-      title: "Give InKind",
-      subtitle: "Mobile-first redesign for a real-world nonprofit platform",
-      tags: ["UX"],
-      color: "#f0d0d0",
-      path: "/work/give-inkind",
     },
     {
       title: "Travel Better: Globo",
@@ -102,6 +88,22 @@ function Home() {
       color: "#e8d4f0",
       path: "/work/globo",
     },
+    {
+      title: "Scalable SaaS Platform",
+      subtitle: "End-to-end UX for a Deloitte Digital enterprise product",
+      tags: ["UX"],
+      color: "#d0dff5",
+      path: "/work/saas-platform",
+    },
+
+    {
+      title: "Give InKind",
+      subtitle: "Mobile-first redesign for a real-world nonprofit platform",
+      tags: ["UX"],
+      color: "#f0d0d0",
+      path: "/work/give-inkind",
+    },
+
     {
       title: "Home Glamour",
       subtitle: "A mobile app concept for home styling and personalisation",

@@ -1,0 +1,200 @@
+@import "../../styles/tokens.css";
+
+.case-study-layout {
+  min-height: 100vh;
+  background: var(--color-bg-gradient);
+}
+
+.cs-back-nav-top {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  padding: var(--space-sm) var(--space-md);
+  padding-top: 80px;
+  transition: color 0.2s ease;
+}
+
+.cs-back-nav-top:hover {
+  color: var(--color-text-heading);
+}
+
+.cs-back-nav-bottom {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  margin-top: var(--space-md);
+  transition: color 0.2s ease;
+}
+
+.cs-back-nav-bottom:hover {
+  color: var(--color-text-heading);
+}
+
+.cs-hero {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.cs-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-md) var(--space-xl);
+}
+
+.cs-title {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  color: var(--color-text-heading);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+}
+
+.cs-tldr {
+  border-top: 1px solid rgba(242, 204, 143, 0.25);
+  border-bottom: 1px solid rgba(242, 204, 143, 0.25);
+  padding: var(--space-md) 0;
+  margin-bottom: var(--space-lg);
+}
+
+.cs-tldr-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+  font-weight: 600;
+}
+
+.cs-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.cs-meta strong {
+  color: var(--color-text-primary);
+}
+
+.cs-hook {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  line-height: 1.8;
+}
+
+.cs-hook p {
+  margin-bottom: var(--space-xs);
+}
+
+.cs-audio-placeholder {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+}
+
+.cs-body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  line-height: 1.8;
+}
+
+.cs-body h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-text-heading);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.cs-body h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-text-heading);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
+.cs-body p {
+  margin-bottom: var(--space-sm);
+}
+
+.cs-other-projects {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(242, 204, 143, 0.25);
+}
+
+.cs-other-projects-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.cs-other-projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cs-other-projects-list a {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.cs-other-projects-list a:hover {
+  color: var(--color-text-heading);
+}
+
+.cs-other-projects-list a::after {
+  content: "→";
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cs-other-projects-list a:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cs-body > p:first-child {
+  margin-top: var(--space-md);
+}
+
+.cs-visual {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  margin: var(--space-sm) 0;
+  margin: var(--space-md) 0;
+  display: block;
+}

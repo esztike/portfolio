@@ -1,0 +1,65 @@
+@import "../../styles/tokens.css";
+
+.slideshow {
+  margin: var(--space-md) 0;
+}
+
+.slideshow-track {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.slideshow-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slideshow-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.slideshow-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+
+.slideshow-btn:hover {
+  color: var(--color-text-heading);
+}
+
+.slideshow-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.slideshow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.4;
+  transition:
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+.slideshow-dot.active {
+  background: var(--color-text-heading);
+  opacity: 1;
+}
