@@ -1,5 +1,6 @@
 import CaseStudyLayout from "../../components/layout/CaseStudyLayout";
 import SharedLanguageContent from "../../content/shared-language.mdx";
+import Slideshow from "../../components/case-study/Slideshow";
 
 const tldr = {
   project: "Design system - enterprise SaaS platform",
@@ -34,16 +35,16 @@ function SharedLanguage() {
     <CaseStudyLayout
       title="Shared language"
       subtitle="Building a design system for an enterprise SaaS platform"
-      heroImage="f0d0d0"
+      heroImage="/case-studies/shared-language/hero.png"
       tldr={tldr}
       otherProjects={[
-        { title: "Travel Better: Globo", path: "/work/globo" },
-        { title: "Scalable SaaS Platform", path: "/work/saas-platform" },
+        { title: "Travel better: Globo", path: "/work/globo" },
+        { title: "Scalable SaaS platform", path: "/work/saas-platform" },
         { title: "Give InKind", path: "/work/give-inkind" },
         { title: "Home Glamour", path: "/work/home-glamour" },
       ]}
     >
-      <SharedLanguageContent />
+      <SharedLanguageContent components={{ Slideshow }} />
     </CaseStudyLayout>
   );
 }
