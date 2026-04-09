@@ -32,13 +32,13 @@ const tldr = {
 function SaasPlatform() {
   return (
     <CaseStudyLayout
-      title="Scalable SaaS Platform"
+      title="Scalable SaaS platform"
       subtitle="End-to-end UX for a Deloitte Digital enterprise product"
       heroImage="/case-studies/saas-platform/hero.png"
       tldr={tldr}
       otherProjects={[
-        { title: "Shared Language", path: "/work/shared-language" },
-        { title: "Travel Better: Globo", path: "/work/globo" },
+        { title: "Shared language", path: "/work/shared-language" },
+        { title: "Travel better: Globo", path: "/work/globo" },
         { title: "Give InKind", path: "/work/give-inkind" },
         { title: "Home Glamour", path: "/work/home-glamour" },
       ]}

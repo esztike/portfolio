@@ -31,13 +31,13 @@ function Globo() {
   return (
     <>
       <CaseStudyLayout
-        title="Travel Better: Globo"
+        title="Travel better: Globo"
         subtitle="Mapping the emotional weight of travel and designing for it"
         heroImage="/case-studies/globo/hero.png"
         tldr={tldr}
         otherProjects={[
-          { title: "Shared Language", path: "/work/shared-language" },
-          { title: "Scalable SaaS Platform", path: "/work/saas-platform" },
+          { title: "Shared language", path: "/work/shared-language" },
+          { title: "Scalable SaaS platform", path: "/work/saas-platform" },
           { title: "Give InKind", path: "/work/give-inkind" },
           { title: "Home Glamour", path: "/work/home-glamour" },
         ]}
