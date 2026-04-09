@@ -34,7 +34,7 @@ function SaasPlatform() {
     <CaseStudyLayout
       title="Scalable SaaS Platform"
       subtitle="End-to-end UX for a Deloitte Digital enterprise product"
-      heroImage="case-studies/saas-platform/hero.png"
+      heroImage="/case-studies/saas-platform/hero.png"
       tldr={tldr}
       otherProjects={[
         { title: "Shared Language", path: "/work/shared-language" },
