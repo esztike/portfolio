@@ -32,6 +32,7 @@ function Globo() {
     <>
       <CaseStudyLayout
         title="Travel Better: Globo"
+        subtitle="Mapping the emotional weight of travel and designing for it"
         heroImage="/case-studies/globo/hero.png"
         tldr={tldr}
         otherProjects={[

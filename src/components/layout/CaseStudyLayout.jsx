@@ -4,7 +4,14 @@ import CaseStudyHero from "../case-study/CaseStudyHero";
 import ScrollToTop from "../ui/ScrollToTop";
 import { ChevronRight, ArrowLeft } from "lucide-react";
 
-function CaseStudyLayout({ title, heroImage, tldr, otherProjects, children }) {
+function CaseStudyLayout({
+  title,
+  subtitle,
+  heroImage,
+  tldr,
+  otherProjects,
+  children,
+}) {
   return (
     <main className="case-study-layout">
       <Link to="/" className="cs-back-nav-top">
@@ -19,7 +26,7 @@ function CaseStudyLayout({ title, heroImage, tldr, otherProjects, children }) {
 
       <div className="cs-container">
         <h1 className="cs-title">{title}</h1>
-
+        {subtitle && <p className="cs-subtitle">{subtitle}</p>}
         <div className="cs-tldr">
           <p className="cs-tldr-label">&lt;tldr&gt;</p>
           <div className="cs-meta">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./Slideshow.css";
 
 function Slideshow({ images = [] }) {
@@ -18,7 +19,7 @@ function Slideshow({ images = [] }) {
       </div>
       <div className="slideshow-controls">
         <button className="slideshow-btn" onClick={prev}>
-          ←
+          <ChevronLeft size={16} />
         </button>
         <div className="slideshow-dots">
           {images.map((_, i) => (
@@ -30,7 +31,7 @@ function Slideshow({ images = [] }) {
           ))}
         </div>
         <button className="slideshow-btn" onClick={next}>
-          →
+          <ChevronRight size={16} />
         </button>
       </div>
     </div>

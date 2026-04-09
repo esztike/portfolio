@@ -1,0 +1,57 @@
+This case study reflects my experience as the primary designer on a confidential Deloitte Digital project. Due to NDA restrictions I can't share product visuals or name the platform directly, but I can speak to the system thinking, the cross-functional collaboration, and the design infrastructure I built from the ground up.
+
+We had just shipped the MVP. It was fast, scrappy, and full of promise. As it moved into development the cracks began to show: button states varied, spacing rules were improvised, developers pinged us daily for clarification. Nobody had dropped the ball. We simply hadn't built the shared language yet. That became my mandate.
+
+## When speed outpaces structure
+
+Before the design system existed, our workflow was reactive. Components were added on demand, often duplicated or slightly tweaked without documentation. The Figma file was becoming a maze of mismatched styles. Developers struggled to interpret spacing logic and font usage. QA flagged visual bugs that stemmed from design ambiguity rather than code errors. We were losing cohesion fast.
+
+This is not unusual in agile environments. When you move fast and ship in sprints, consistency is often the first casualty. The team was experienced but the product was growing faster than our process was. By the end of that sprint it was clear the current approach wasn't sustainable. So we made a strategic decision: build the system properly, and build it now.
+
+## Building the backbone
+
+I started by asking the most important question: where do we begin? The answer was an audit. I went through the existing Figma files systematically, mapping components, identifying duplications, and documenting the inconsistencies that were causing the most friction downstream.
+
+Rather than starting from scratch I leaned on established systems like IBM Carbon and Google Material Design as benchmarks for what works at scale. The guiding principle, borrowed from Dan Mall, was simple: don't try to include everything. Start with what is already used everywhere. Navigation, headers, tables, forms. The components doing the heavy lifting across every screen. Everything else could follow.
+
+From there I began building. Buttons in all their variants, form elements, navigation patterns, data tables with typed columns, charts, cards, modals, dashboards. The system grew sprint by sprint, always connected to what the product actually needed.
+
+{/* Visual: Token hierarchy diagram */}
+
+## Making the case
+
+Since I can't share product visuals directly, I created these slides to articulate the thinking that underpinned the system. The principles here: consistency, efficiency, scalability, collaboration, accessibility. These weren't abstract ideals. They were the actual problems we were solving for, sprint by sprint.
+
+{/* Visual: Presentation slides slideshow */}
+
+## What we built
+
+The system grew to cover everything the product needed. Buttons in all their states and variants, form elements, navigation patterns, both top and side, expanded and icon-only. Tables with typed columns. Cards, modals, alerts, empty states. Twenty chart types referenced from Carbon and adapted for the platform. Dashboards combining all of the above.
+
+In total the system covered 100+ components across six categories, built entirely in Figma and handed off to Storybook in close collaboration with a developer. My role was to design, document, and oversee the implementation, raising issues, reviewing builds, and ensuring what shipped matched what was designed.
+
+## Where design meets code
+
+Building the system in Figma was one thing. Making it real was another. Working directly with a developer to implement components in Storybook meant confronting the gap between design decisions and technical constraints, and learning to navigate it collaboratively.
+
+Some decisions that looked clean in Figma were costly to build. Some edge cases only became visible in code. That back and forth was not a problem to manage, it was part of the process. A design system is not a designer's deliverable handed over a wall. It is a shared agreement, built through constant conversation between disciplines.
+
+My role was to stay in that conversation: reviewing builds, raising flags, adjusting decisions where needed, and making sure the system worked as well in development as it did in design.
+
+{/* Visual: Contribution workflow diagram */}
+
+## What changed
+
+The difference was felt quickly. Design reviews grew faster and more focused. Developers spent less time interpreting spacing or font choices. QA flagged fewer visual bugs rooted in ambiguity. The shared language we built through documentation and 100+ consistent components allowed each team to move with more confidence.
+
+The impact was cultural too. The system gave the team a way to talk about design with clarity and shared intent. It created space for better feedback, faster iteration, and more inclusive decision-making. A well maintained system does not just reduce inconsistency, it reduces friction between people.
+
+The system ultimately supported 14 product modules across a single enterprise platform, serving data teams and marketers, from data ingestion through to campaign delivery. For a product of that scope, the design system was not a nice to have. It was the foundation everything else built on.
+
+## Systems are relational
+
+Good systems aren't just scalable. They're also relational. They grow with the people who use them.
+
+That is what I took away from over two years on this product. The documentation, components, the Storybook handoff. Those were the deliverables. But the real work was building trust across disciplines. Learning to speak a developer's language. Accepting that some of my design decisions needed to change when they met reality in code. Creating space where a cross-functional team could move with shared confidence.
+
+I came into this project as a designer. I left it understanding that the boundary between design and development is not a handoff point. It is a collaboration space. That shift in how I think about my work has shaped everything I've done since.
