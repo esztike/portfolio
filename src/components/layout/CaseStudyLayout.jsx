@@ -1,16 +1,21 @@
 import { Link } from "react-router-dom";
 import "./CaseStudyLayout.css";
+import CaseStudyHero from "../case-study/CaseStudyHero";
+import ScrollToTop from "../ui/ScrollToTop";
+import { ChevronRight, ArrowLeft } from "lucide-react";
 
 function CaseStudyLayout({ title, heroImage, tldr, otherProjects, children }) {
   return (
     <main className="case-study-layout">
       <Link to="/" className="cs-back-nav-top">
-        ← /work
+        <span className="cs-guillemets">
+          <span className="g1">‹</span>
+          <span className="g2">‹</span>
+          <span className="g3">‹</span>
+        </span>
+        projects
       </Link>
-      <div
-        className="cs-hero"
-        style={{ background: heroImage || "var(--color-indigo)" }}
-      />
+      <CaseStudyHero src={heroImage} color={heroImage} />
 
       <div className="cs-container">
         <h1 className="cs-title">{title}</h1>
@@ -46,7 +51,13 @@ function CaseStudyLayout({ title, heroImage, tldr, otherProjects, children }) {
             <ul className="cs-other-projects-list">
               {otherProjects.map((p) => (
                 <li key={p.path}>
-                  <Link to={p.path}>{p.title}</Link>
+                  <Link to={p.path} className="cs-other-project-link">
+                    <ChevronRight
+                      size={14}
+                      className="cs-other-project-chevron"
+                    />
+                    {p.title}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -54,9 +65,11 @@ function CaseStudyLayout({ title, heroImage, tldr, otherProjects, children }) {
         )}
 
         <Link to="/" className="cs-back-nav-bottom">
-          ← back to all work
+          <ArrowLeft size={12} />
+          back to projects
         </Link>
       </div>
+      <ScrollToTop />
     </main>
   );
 }

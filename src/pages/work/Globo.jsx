@@ -32,7 +32,7 @@ function Globo() {
     <>
       <CaseStudyLayout
         title="Travel Better: Globo"
-        heroImage="#e8d4f0"
+        heroImage="/case-studies/globo/hero.png"
         tldr={tldr}
         otherProjects={[
           { title: "Shared Language", path: "/work/shared-language" },

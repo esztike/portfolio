@@ -6,10 +6,12 @@
 }
 
 .cs-back-nav-top {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-mono);
   font-size: var(--text-sm);
-  color: var(--color-text-primary);
+  color: var(--color-text-heading);
   text-decoration: none;
   padding: var(--space-sm) var(--space-md);
   padding-top: 80px;
@@ -17,21 +19,59 @@
 }
 
 .cs-back-nav-top:hover {
-  color: var(--color-text-heading);
+  color: var(--color-text-primary);
+}
+
+.cs-guillemets {
+  display: inline-flex;
+  gap: 1px;
+}
+
+.cs-guillemets span {
+  opacity: 0.3;
+  font-size: var(--text-sm);
+  line-height: 1;
+}
+
+.g1 {
+  animation: guillemet-pulse 1.2s infinite 0.4s;
+}
+.g2 {
+  animation: guillemet-pulse 1.2s infinite 0.2s;
+}
+.g3 {
+  animation: guillemet-pulse 1.2s infinite 0s;
+}
+
+@keyframes guillemet-pulse {
+  0% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.3;
+  }
 }
 
 .cs-back-nav-bottom {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-mono);
   font-size: var(--text-sm);
-  color: var(--color-text-primary);
+  color: var(--color-text-heading);
   text-decoration: none;
   margin-top: var(--space-md);
   transition: color 0.2s ease;
 }
 
 .cs-back-nav-bottom:hover {
-  color: var(--color-text-heading);
+  color: var(--color-text-primary);
 }
 
 .cs-hero {
@@ -157,23 +197,22 @@
   gap: 4px;
 }
 
-.cs-other-projects-list a {
+.cs-other-project-link {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
-  color: var(--color-text-secondary);
+  color: var(--color-text-heading);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   transition: color 0.2s ease;
 }
 
-.cs-other-projects-list a:hover {
-  color: var(--color-text-heading);
+.cs-other-project-link:hover {
+  color: var(--color-text-primary);
 }
 
-.cs-other-projects-list a::after {
-  content: "→";
+.cs-other-project-chevron {
   opacity: 0;
   transform: translateX(-4px);
   transition:
@@ -181,7 +220,7 @@
     transform 0.2s ease;
 }
 
-.cs-other-projects-list a:hover::after {
+.cs-other-project-link:hover .cs-other-project-chevron {
   opacity: 1;
   transform: translateX(0);
 }
