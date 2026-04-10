@@ -1,5 +1,6 @@
 import CaseStudyLayout from "../../components/layout/CaseStudyLayout";
 import GiveInkindContent from "../../content/give-inkind.mdx";
+import Slideshow from "../../components/case-study/Slideshow";
 
 const tldr = {
   project: "UX case study — mobile-first redesign for a crowdfunding platform",
@@ -35,7 +36,7 @@ function GiveInKind() {
     <CaseStudyLayout
       title="Redesigning for mobile-first clarity"
       subtitle="A UX case study about rebuilding Give InKind's website with a mobile-first, responsive approach"
-      heroImage="/case-studies/give-inkind/hero.png"
+      heroImage="/case-studies/give-inkind/hero2.png"
       tldr={tldr}
       otherProjects={[
         { title: "Shared language", path: "/work/shared-language" },
@@ -44,7 +45,7 @@ function GiveInKind() {
         { title: "Home Glamour", path: "/work/home-glamour" },
       ]}
     >
-      <GiveInkindContent />
+      <GiveInkindContent components={{ Slideshow }} />
     </CaseStudyLayout>
   );
 }
