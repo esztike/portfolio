@@ -67,48 +67,49 @@ function Home() {
 
   const projects = [
     {
-      title: "Error Series",
+      title: "Sofia Error Series",
       subtitle: "Designing for human recovery in agentic AI systems",
       tags: ["UX", "AI"],
-      color: "#d4e8d0",
+      color: "#DED5C8",
       path: "/work/error-series",
-      featured: true,
+      comingSoon: true,
     },
     {
-      title: "Shared Language",
+      title: "Shared language",
       subtitle: "Building a design system for a 200-person product team",
-      tags: ["UX", "Dev"],
-      color: "#f5e6d0",
+      tags: ["UX", "DEV"],
+      image: "/case-studies/shared-language/hero.png",
       path: "/work/shared-language",
     },
     {
-      title: "Travel Better: Globo",
+      title: "Travel better: Globo",
       subtitle: "Intentional research and emotionally intelligent UX in motion",
       tags: ["UX"],
-      color: "#e8d4f0",
+      image: "/case-studies/globo/hero.png",
       path: "/work/globo",
     },
     {
-      title: "Scalable SaaS Platform",
+      title: "Scalable SaaS platform",
+
       subtitle: "End-to-end UX for a Deloitte Digital enterprise product",
       tags: ["UX"],
-      color: "#d0dff5",
+      image: "/case-studies/saas-platform/hero.png",
       path: "/work/saas-platform",
     },
-
     {
       title: "Give InKind",
+
       subtitle: "Mobile-first redesign for a real-world nonprofit platform",
       tags: ["UX"],
-      color: "#f0d0d0",
+      image: "/case-studies/give-inkind/hero2.png",
       path: "/work/give-inkind",
     },
-
     {
       title: "Home Glamour",
+
       subtitle: "A mobile app concept for home styling and personalisation",
       tags: ["UX"],
-      color: "#f0f0d0",
+      image: "/case-studies/home-glamour/hero.png",
       path: "/work/home-glamour",
     },
   ];
@@ -139,31 +140,70 @@ function Home() {
             viewport={{ once: false, margin: "-80px" }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
           >
-            <Link
-              to={project.path}
-              className={`work-card${project.featured ? " featured" : ""}`}
-            >
-              <div className="work-card-visual-wrapper">
-                <div
-                  className="work-card-visual"
-                  style={{ background: project.color }}
-                />
-                {project.featured && (
-                  <span className="work-card-badge">Featured</span>
-                )}
-              </div>
-              <div className="work-card-text">
-                <span className="row-title">{project.title}</span>
-                <span className="row-subtitle">{project.subtitle}</span>
-                <div className="work-card-tags">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="row-tag">
-                      {tag}
-                    </span>
-                  ))}
+            {project.comingSoon ? (
+              <div className="work-card inactive">
+                <div className="work-card-visual-wrapper">
+                  <div
+                    className="work-card-visual"
+                    style={{ background: "#DED5C8" }}
+                  />
+                  <span className="work-card-badge coming-soon">
+                    Coming Soon
+                  </span>
+                </div>
+                <div className="work-card-text">
+                  <span className="row-title" style={{ color: "#DED5C8" }}>
+                    {project.title}
+                  </span>
+                  <span className="row-subtitle" style={{ color: "#DED5C8" }}>
+                    {project.subtitle}
+                  </span>
+                  <div className="work-card-tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="row-tag inactive-tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </Link>
+            ) : (
+              <Link
+                to={project.path}
+                className={`work-card${project.featured ? " featured" : ""}`}
+              >
+                <div className="work-card-visual-wrapper">
+                  <div className="work-card-visual">
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="work-card-hero-img"
+                      />
+                    ) : (
+                      <div
+                        style={{
+                          background: project.color,
+                          width: "100%",
+                          height: "100%",
+                        }}
+                      />
+                    )}
+                  </div>
+                </div>
+                <div className="work-card-text">
+                  <span className="row-title">{project.title}</span>
+                  <span className="row-subtitle">{project.subtitle}</span>
+                  <div className="work-card-tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="row-tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            )}
           </motion.div>
         ))}
       </div>

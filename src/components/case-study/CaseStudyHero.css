@@ -4,3 +4,15 @@
   display: block;
   object-fit: cover;
 }
+
+@media (max-width: 800px) {
+  .cs-hero-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs-hero-image {
+    height: 200px;
+  }
+}
