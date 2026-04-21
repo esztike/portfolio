@@ -243,6 +243,152 @@ video {
   opacity: 0.8;
 }
 
+/* ABOUT */
+.page-title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--color-text-heading);
+  line-height: 1.1;
+  text-align: left;
+}
+
+.page-title .bio-name {
+  font-size: 2.5rem;
+}
+
+.about-profile-pic {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-light);
+  background: var(--color-surface);
+  margin-top: var(--space-sm);
+  margin-left: auto;
+}
+
+.about-hero {
+  position: relative;
+  margin-bottom: var(--space-lg);
+}
+
+.about-bio p {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-sm);
+}
+
+.about-bio {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.about-experience {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: var(--space-lg);
+}
+
+.about-exp-list {
+  flex: 0 0 55%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: var(--space-md);
+}
+
+.about-exp-heading {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-sm);
+}
+
+.about-exp-entries {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-exp-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.about-exp-entry:last-child {
+  border-bottom: none;
+}
+
+.about-exp-role {
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+.about-exp-year {
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+}
+
+.about-skills {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 8px;
+}
+
+.about-sticky {
+  padding: 20px 24px;
+  border-radius: 4px;
+  box-shadow: 4px 4px 12px var(--color-shadow);
+  max-width: 280px;
+}
+
+.about-sticky.ux {
+  background: rgba(242, 204, 143, 0.15);
+  transform: rotate(2deg);
+  margin-left: 24px;
+}
+
+.about-sticky.dev {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  transform: rotate(-2deg);
+  margin-top: -20px;
+  margin-left: 8px;
+}
+
+.about-sticky-heading {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-text-heading);
+  margin-bottom: 10px;
+}
+
+.about-sticky p {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
 @keyframes blink {
   0%,
   100% {
@@ -280,5 +426,27 @@ video {
 
   .bio {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-experience {
+    flex-direction: column;
+  }
+
+  .about-exp-list {
+    flex: none;
+    width: 100%;
+  }
+
+  .about-skills {
+    order: -1;
+    width: 100%;
+  }
+
+  .about-sticky {
+    max-width: 100%;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
   }
 }
