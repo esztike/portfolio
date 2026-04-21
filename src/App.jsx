@@ -9,6 +9,8 @@ import SharedLanguage from "./pages/work/SharedLanguage";
 import GiveInkind from "./pages/work/GiveInkind";
 import Globo from "./pages/work/Globo";
 import HomeGlamour from "./pages/work/HomeGlamour";
+import ScrollRestorer from "./components/ui/ScrollRestorer";
+import NotFound from "./pages/NotFound";
 
 function AppContent() {
   const location = useLocation();
@@ -31,6 +33,7 @@ function AppContent() {
           }}
         />
       )}
+      <ScrollRestorer />
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -41,6 +44,7 @@ function AppContent() {
         <Route path="/work/give-inkind" element={<GiveInkind />} />
         <Route path="/work/globo" element={<Globo />} />
         <Route path="/work/home-glamour" element={<HomeGlamour />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <footer className="site-footer">
         <p>© Eszti Hollenback 2026</p>

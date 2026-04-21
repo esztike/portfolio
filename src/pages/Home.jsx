@@ -125,12 +125,12 @@ function Home() {
       <div className="intro">
         <div ref={headlineRef} className="typed-headline"></div>
         <p className="bio">
-          <span className="bio-name">&lt;eszti&gt;</span> designs systems and
-          builds interfaces, working at the intersection of research, systems
-          thinking, and frontend code.
+          <span className="bio-name">&lt;eszti&gt;</span> works at the
+          intersection of design, research, and code, building systems that work
+          and interfaces that people want to use.
         </p>
       </div>
-      <span className="work-label">Selected projects</span>
+      <span className="work-label">Selected works</span>
       <div className="work-grid">
         {projects.map((project, i) => (
           <motion.div
