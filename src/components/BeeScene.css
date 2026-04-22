@@ -1,7 +1,5 @@
 .bee-scene {
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
   padding: 24px 0 32px;
   overflow: hidden;
 }
@@ -21,19 +19,13 @@
 .daisy {
   display: block;
   image-rendering: pixelated;
-}
-
-.bee-wrapper {
-  position: absolute;
-  bottom: 88px;
-  left: 75%;
+  transform-origin: bottom center;
 }
 
 .bee {
   display: block;
   image-rendering: pixelated;
-}
-
-.bee-divider {
-  width: 100%;
+  position: absolute;
+  bottom: 72px;
+  left: 0;
 }

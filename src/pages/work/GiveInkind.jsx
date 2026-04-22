@@ -36,7 +36,7 @@ function GiveInKind() {
     <CaseStudyLayout
       title="Redesigning for mobile-first clarity"
       subtitle="A UX case study about rebuilding Give InKind's website with a mobile-first, responsive approach"
-      heroImage="/case-studies/give-inkind/hero2.png"
+      heroImage="/case-studies/give-inkind/hero.png"
       tldr={tldr}
       otherProjects={[
         { title: "Shared language", path: "/work/shared-language" },
