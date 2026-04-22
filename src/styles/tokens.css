@@ -9,7 +9,7 @@
   /* Colors: roles */
   --color-bg: var(--color-indigo);
   --color-bg-gradient: linear-gradient(160deg, #3d405b, #2e3150);
-  --color-surface: rgba(242, 204, 143, 0.05);
+  --color-surface: rgba(61, 64, 91, 0.10);
   --color-border-light: rgba(242, 204, 143, 0.05);
   --color-border-subtle: rgba(242, 204, 143, 0.03);
   --color-shadow: rgba(242, 204, 143, 0.15);

@@ -257,13 +257,15 @@ video {
 }
 
 .about-profile-pic {
-  width: 96px;
-  height: 96px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 1px solid var(--color-border-light);
-  background: var(--color-surface);
+  background: var(--color-accent);
   margin-top: var(--space-sm);
-  margin-left: auto;
+  overflow: hidden;
+  object-fit: cover;
+  margin: var(--space-sm) auto 0;
 }
 
 .about-hero {
@@ -368,19 +370,24 @@ video {
 .about-sticky {
   padding: 20px 24px;
   border-radius: 4px;
-  box-shadow: 4px 4px 12px var(--color-shadow);
+  box-shadow: 4px 4px 12px var(--color-border-light);
   max-width: 280px;
 }
 
 .about-sticky.ux {
-  background: rgba(242, 204, 143, 0.15);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
   margin-left: 24px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   /* remove transform: rotate(2deg) */
 }
 
 .about-sticky.dev {
   background: var(--color-surface);
   border: 1px solid var(--color-border-light);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   margin-top: 20px;
   margin-left: 8px;
   /* remove transform: rotate(-2deg) */

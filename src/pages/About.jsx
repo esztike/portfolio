@@ -1,6 +1,7 @@
 import AboutContent from "../content/about.mdx";
 import { motion } from "framer-motion";
 import BeeScene from "../components/BeeScene";
+import avatar from "/src/assets/avatar-2.png";
 
 function About() {
   return (
@@ -15,14 +16,19 @@ function About() {
         <h1 className="page-title">
           Who is <span className="bio-name">&lt;eszti&gt;</span>?
         </h1>
-        <motion.div
+        <motion.img
+          src={avatar}
+          alt="Eszti"
           className="about-profile-pic"
-          aria-hidden="true"
-          animate={{ y: [-6, 6] }}
+          animate={{
+            y: [-6, 4, -4, 6],
+            x: [-3, 3, -2, 3],
+            rotate: [-1, 1, -0.5, 1],
+          }}
           transition={{
-            duration: 4,
+            duration: 6,
             repeat: Infinity,
-            repeatType: "reverse",
+            repeatType: "mirror",
             ease: "easeInOut",
           }}
         />
