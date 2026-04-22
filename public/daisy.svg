@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" width="240" height="320">
+  <title>Pixel daisy</title>
+  <style>.px { shape-rendering: crispEdges; }</style>
+
+  <!-- 3x3 yellow center: x=60–120, y=120–180 -->
+  <rect class="px" x="60" y="120" width="20" height="20" fill="#F5C518"/>
+  <rect class="px" x="80" y="120" width="20" height="20" fill="#FADA5E"/>
+  <rect class="px" x="100" y="120" width="20" height="20" fill="#F5C518"/>
+  <rect class="px" x="60" y="140" width="20" height="20" fill="#FADA5E"/>
+  <rect class="px" x="80" y="140" width="20" height="20" fill="#FFE566"/>
+  <rect class="px" x="100" y="140" width="20" height="20" fill="#FADA5E"/>
+  <rect class="px" x="60" y="160" width="20" height="20" fill="#F5C518"/>
+  <rect class="px" x="80" y="160" width="20" height="20" fill="#FADA5E"/>
+  <rect class="px" x="100" y="160" width="20" height="20" fill="#F5C518"/>
+
+  <!-- Top petal -->
+  <rect class="px" x="60" y="80" width="20" height="20" fill="#F8F8F0"/>
+  <rect class="px" x="80" y="80" width="20" height="20" fill="#F8F8F0"/>
+  <rect class="px" x="100" y="80" width="20" height="20" fill="#F8F8F0"/>
+  <rect class="px" x="60" y="100" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="80" y="100" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="100" y="100" width="20" height="20" fill="#EFEFEA"/>
+
+  <!-- Bottom petal -->
+  <rect class="px" x="60" y="180" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="80" y="180" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="100" y="180" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="60" y="200" width="20" height="20" fill="#F8F8F0"/>
+  <rect class="px" x="80" y="200" width="20" height="20" fill="#F8F8F0"/>
+  <rect class="px" x="100" y="200" width="20" height="20" fill="#F8F8F0"/>
+
+  <!-- Right petal -->
+  <rect class="px" x="120" y="120" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="120" y="140" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="120" y="160" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="140" y="120" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="140" y="140" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="140" y="160" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="160" y="120" width="20" height="20" fill="#F8F8F0"/>
+  <rect class="px" x="160" y="140" width="20" height="20" fill="#F8F8F0"/>
+  <rect class="px" x="160" y="160" width="20" height="20" fill="#F8F8F0"/>
+
+  <!-- Left petal -->
+  <rect class="px" x="40" y="120" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="40" y="140" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="40" y="160" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="20" y="120" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="20" y="140" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="20" y="160" width="20" height="20" fill="#EFEFEA"/>
+  <rect class="px" x="0" y="120" width="20" height="20" fill="#F8F8F0"/>
+  <rect class="px" x="0" y="140" width="20" height="20" fill="#F8F8F0"/>
+  <rect class="px" x="0" y="160" width="20" height="20" fill="#F8F8F0"/>
+
+  <!-- Stem -->
+  <rect class="px" x="80" y="220" width="20" height="20" fill="#5D9E3A"/>
+  <rect class="px" x="80" y="240" width="20" height="20" fill="#5D9E3A"/>
+  <rect class="px" x="80" y="260" width="20" height="20" fill="#4A7D2E"/>
+  <rect class="px" x="80" y="280" width="20" height="20" fill="#4A7D2E"/>
+
+  <!-- Leaves -->
+  <rect class="px" x="60" y="240" width="20" height="20" fill="#5D9E3A"/>
+  <rect class="px" x="40" y="240" width="20" height="20" fill="#4A7D2E"/>
+  <rect class="px" x="100" y="260" width="20" height="20" fill="#5D9E3A"/>
+  <rect class="px" x="120" y="260" width="20" height="20" fill="#4A7D2E"/>
+</svg>

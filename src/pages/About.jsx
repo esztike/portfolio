@@ -1,4 +1,5 @@
 import AboutContent from "../content/about.mdx";
+import BeeScene from "../components/BeeScene";
 
 function About() {
   return (
@@ -20,6 +21,9 @@ function About() {
       </section>
 
       {/* Bee divider — animation placeholder */}
+      <section className="bee-divider">
+        <BeeScene />
+      </section>
 
       <section className="about-experience">
         <div className="about-exp-list">
