@@ -322,34 +322,47 @@ video {
 }
 
 .about-exp-entry {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 160px 1fr 120px;
   align-items: baseline;
   padding: 12px 0;
   border-bottom: 1px solid var(--color-border-light);
+  gap: 16px;
 }
 
 .about-exp-entry:last-child {
   border-bottom: none;
 }
 
-.about-exp-role {
+.about-exp-company {
   color: var(--color-text-primary);
   font-family: var(--font-body);
+  text-align: left;
+}
+
+.about-exp-title {
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  text-align: left;
 }
 
 .about-exp-year {
   color: var(--color-text-secondary);
   font-family: var(--font-body);
   font-size: var(--text-sm);
+  text-align: left;
 }
 
 .about-skills {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding-top: 8px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  margin-left: -40px;
+  position: relative;
+  z-index: 1;
 }
 
 .about-sticky {
@@ -361,16 +374,16 @@ video {
 
 .about-sticky.ux {
   background: rgba(242, 204, 143, 0.15);
-  transform: rotate(2deg);
   margin-left: 24px;
+  /* remove transform: rotate(2deg) */
 }
 
 .about-sticky.dev {
   background: var(--color-surface);
   border: 1px solid var(--color-border-light);
-  transform: rotate(-2deg);
-  margin-top: -20px;
+  margin-top: 20px;
   margin-left: 8px;
+  /* remove transform: rotate(-2deg) */
 }
 
 .about-sticky-heading {
@@ -429,7 +442,8 @@ video {
   }
 }
 
-@media (max-width: 800px) {
+/* MIDDLE: 600px–999px */
+@media (max-width: 999px) {
   .about-experience {
     flex-direction: column;
   }
@@ -440,13 +454,41 @@ video {
   }
 
   .about-skills {
-    order: -1;
+    flex-direction: row;
     width: 100%;
+    margin-left: 0;
+    order: -1;
   }
 
   .about-sticky {
-    max-width: 100%;
+    flex: 1;
+    max-width: none;
     margin-left: 0 !important;
     margin-top: 0 !important;
+  }
+}
+
+/* SMALL: below 600px */
+@media (max-width: 599px) {
+  .about-skills {
+    flex-direction: column;
+  }
+
+  .about-exp-entry {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+
+  .about-exp-company {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .about-exp-title {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .about-exp-year {
+    grid-column: 2;
+    grid-row: 1;
   }
 }

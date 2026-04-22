@@ -1,4 +1,5 @@
 import AboutContent from "../content/about.mdx";
+import { motion } from "framer-motion";
 import BeeScene from "../components/BeeScene";
 
 function About() {
@@ -14,7 +15,17 @@ function About() {
         <h1 className="page-title">
           Who is <span className="bio-name">&lt;eszti&gt;</span>?
         </h1>
-        <div className="about-profile-pic" aria-hidden="true" />
+        <motion.div
+          className="about-profile-pic"
+          aria-hidden="true"
+          animate={{ y: [-6, 6] }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+        />
       </section>
       <section className="about-bio">
         <AboutContent />
@@ -30,38 +41,62 @@ function About() {
           <h2 className="about-exp-heading">Experience</h2>
           <ul className="about-exp-entries">
             <li className="about-exp-entry">
-              <span className="about-exp-role">Freelance</span>
+              <span className="about-exp-company">Freelance</span>
+              <span className="about-exp-title">UX Designer & Developer</span>
               <span className="about-exp-year">2023 – present</span>
             </li>
             <li className="about-exp-entry">
-              <span className="about-exp-role">Deloitte Digital</span>
+              <span className="about-exp-company">Deloitte Digital</span>
+              <span className="about-exp-title">UX/UI Designer</span>
               <span className="about-exp-year">2021 – 2023</span>
             </li>
             <li className="about-exp-entry">
-              <span className="about-exp-role">MBO Partners</span>
+              <span className="about-exp-company">MBO Partners</span>
+              <span className="about-exp-title">UX/UI Designer</span>
               <span className="about-exp-year">2020 – 2021</span>
             </li>
             <li className="about-exp-entry">
-              <span className="about-exp-role">Freelance</span>
+              <span className="about-exp-company">Freelance</span>
+              <span className="about-exp-title">UX Design Consultant</span>
               <span className="about-exp-year">2019 – 2021</span>
             </li>
           </ul>
         </div>
         <div className="about-skills">
-          <div className="about-sticky ux">
+          <motion.div
+            className="about-sticky ux"
+            initial={{ y: -5, rotate: 2 }}
+            animate={{ y: [-5, 5], rotate: [-1, 1] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut",
+            }}
+          >
             <h3 className="about-sticky-heading">UX skills</h3>
             <p>
               user experience & interface design · design systems · user
               research · interaction design
             </p>
-          </div>
-          <div className="about-sticky dev">
+          </motion.div>
+          <motion.div
+            className="about-sticky dev"
+            initial={{ y: -5, rotate: 1 }}
+            animate={{ y: 5, rotate: -1 }}
+            transition={{
+              duration: 3.5,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut",
+            }}
+          >
             <h3 className="about-sticky-heading">DEV skills</h3>
             <p>
               HTML · CSS · JavaScript · React · Node.js · Express.js · MongoDB ·
               REST API · Git / GitHub · Vercel
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
     </main>
