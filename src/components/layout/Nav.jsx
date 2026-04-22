@@ -87,7 +87,13 @@ function Nav() {
       {isOpen && (
         <>
           <div className="nav-backdrop" onClick={() => setIsOpen(false)} />
-          <div className="nav-dropdown">
+          <div
+            className="nav-dropdown"
+            style={{
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+            }}
+          >
             <NavLink
               to="/"
               className="nav-dropdown-link"

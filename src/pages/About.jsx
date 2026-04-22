@@ -33,7 +33,13 @@ function About() {
           }}
         />
       </section>
-      <section className="about-bio">
+      <section
+        className="about-bio"
+        style={{
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+        }}
+      >
         <AboutContent />
       </section>
 
@@ -43,7 +49,13 @@ function About() {
       </section>
 
       <section className="about-experience">
-        <div className="about-exp-list">
+        <div
+          className="about-exp-list"
+          style={{
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+          }}
+        >
           <h2 className="about-exp-heading">Experience</h2>
           <ul className="about-exp-entries">
             <li className="about-exp-entry">
@@ -79,6 +91,10 @@ function About() {
               repeatType: "reverse",
               ease: "easeInOut",
             }}
+            style={{
+              backdropFilter: "blur(20px)",
+              WebkitBackdropFilter: "blur(20px)",
+            }}
           >
             <h3 className="about-sticky-heading">UX skills</h3>
             <p>
@@ -95,6 +111,10 @@ function About() {
               repeat: Infinity,
               repeatType: "reverse",
               ease: "easeInOut",
+            }}
+            style={{
+              backdropFilter: "blur(20px)",
+              WebkitBackdropFilter: "blur(20px)",
             }}
           >
             <h3 className="about-sticky-heading">DEV skills</h3>
