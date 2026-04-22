@@ -141,7 +141,13 @@ function Home() {
             transition={{ duration: 0.5, delay: i * 0.1 }}
           >
             {project.comingSoon ? (
-              <div className="work-card inactive">
+              <div
+                className="work-card inactive"
+                style={{
+                  backdropFilter: "blur(20px)",
+                  WebkitBackdropFilter: "blur(20px)",
+                }}
+              >
                 <div className="work-card-visual-wrapper">
                   <div
                     className="work-card-visual"
@@ -171,6 +177,10 @@ function Home() {
               <Link
                 to={project.path}
                 className={`work-card${project.featured ? " featured" : ""}`}
+                style={{
+                  backdropFilter: "blur(20px)",
+                  WebkitBackdropFilter: "blur(20px)",
+                }}
               >
                 <div className="work-card-visual-wrapper">
                   <div className="work-card-visual">
