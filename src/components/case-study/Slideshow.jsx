@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./Slideshow.css";
 
-function Slideshow({ images = [] }) {
+function Slideshow({ images = [], caption }) {
   const [current, setCurrent] = useState(0);
 
   const prev = () => setCurrent((i) => (i === 0 ? images.length - 1 : i - 1));
@@ -34,6 +34,7 @@ function Slideshow({ images = [] }) {
           <ChevronRight size={16} />
         </button>
       </div>
+      {caption && <p className="slideshow-caption">{caption}</p>}
     </div>
   );
 }

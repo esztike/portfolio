@@ -7,13 +7,13 @@
 .slideshow-track {
   width: 100%;
   overflow: hidden;
-  border-radius: var(--radius-md);
 }
 
 .slideshow-image {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: var(--radius-md);
 }
 
 .slideshow-controls {
@@ -62,4 +62,12 @@
 .slideshow-dot.active {
   background: var(--color-text-heading);
   opacity: 1;
+}
+
+.slideshow-caption {
+  margin-top: var(--space-xs);
+  font-family: var(--font-label);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
 }
