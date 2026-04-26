@@ -119,6 +119,9 @@ video {
   border-color: var(--color-accent);
   background: var(--color-hover);
 }
+.work-card:hover .work-card-hero-img {
+  filter: brightness(1.08);
+}
 
 .work-card-left {
   display: flex;
@@ -146,6 +149,7 @@ video {
   object-fit: cover;
   object-position: top;
   display: block;
+  transition: filter 0.2s ease;
 }
 
 .work-card-badge {

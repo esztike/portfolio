@@ -101,7 +101,7 @@ function Home() {
 
       subtitle: "Mobile-first redesign for a real-world nonprofit platform",
       tags: ["UX"],
-      image: "/case-studies/give-inkind/hero2.png",
+      image: "/case-studies/give-inkind/hero.png",
       path: "/work/give-inkind",
     },
     {
@@ -189,6 +189,9 @@ function Home() {
                         src={project.image}
                         alt={project.title}
                         className="work-card-hero-img"
+                        style={{
+                          objectPosition: project.objectPosition || "top",
+                        }}
                       />
                     ) : (
                       <div

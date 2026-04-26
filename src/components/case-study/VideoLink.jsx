@@ -6,12 +6,20 @@ import "./VideoLink.css";
 
 function VideoLink({ href, title, caption }) {
   const [thumbnail, setThumbnail] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(`https://vimeo.com/api/oembed.json?url=${href}`)
       .then((res) => res.json())
-      .then((data) => setThumbnail(data.thumbnail_url))
-      .catch(() => setThumbnail(null));
+      .then((data) => {
+        const hd = data.thumbnail_url.replace(/_\d+x\d+/, "_1280x720");
+        setThumbnail(hd);
+        setLoading(false);
+      })
+      .catch(() => {
+        setThumbnail(null);
+        setLoading(false);
+      });
   }, [href]);
 
   return (
@@ -25,18 +33,41 @@ function VideoLink({ href, title, caption }) {
         transition={{ duration: 0.2 }}
       >
         <div className="video-link-thumb">
-          {thumbnail && (
-            <img src={thumbnail} alt={title} className="video-link-img" />
+          {loading ? (
+            <div className="video-link-skeleton">
+              <div className="video-link-shimmer" />
+            </div>
+          ) : (
+            <>
+              {thumbnail && (
+                <img src={thumbnail} alt={title} className="video-link-img" />
+              )}
+              <div className="video-link-play">
+                <div className="video-link-play-btn">
+                  <Play
+                    size={18}
+                    fill="var(--color-indigo)"
+                    color="var(--color-indogo)"
+                  />
+                </div>
+              </div>
+            </>
           )}
-          <div className="video-link-play">
-            <Play size={20} color="var(--color-text-heading)" />
-          </div>
         </div>
         <div className="video-link-footer">
-          <span className="video-link-title">{title}</span>
-          <span className="video-link-watch">
-            Watch <ExternalLink size={12} />
-          </span>
+          {loading ? (
+            <div className="video-link-skeleton-footer">
+              <div className="video-link-skeleton-line wide" />
+              <div className="video-link-skeleton-line narrow" />
+            </div>
+          ) : (
+            <>
+              <span className="video-link-title">{title}</span>
+              <span className="video-link-watch">
+                Watch <ExternalLink size={12} />
+              </span>
+            </>
+          )}
         </div>
       </motion.a>
       {caption && <p className="video-link-caption">{caption}</p>}
