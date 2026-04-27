@@ -262,6 +262,28 @@ video {
   margin-bottom: var(--space-sm);
 }
 
+.case-study-image--scroll {
+  overflow: visible;
+}
+
+.cs-scroll-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: grab;
+}
+
+.case-study-image--scroll .cs-visual {
+  max-width: none;
+  height: auto;
+  width: auto;
+  max-height: 540px;
+}
+@media (max-width: 800px) {
+  .case-study-image--scroll .cs-visual {
+    max-height: 320px;
+  }
+}
+
 /* ABOUT */
 .page-title {
   font-family: var(--font-display);
