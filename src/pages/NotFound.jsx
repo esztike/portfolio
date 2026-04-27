@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import "../styles/not-found.css";
+import "./not-found.css";
 
 function NotFound() {
   return (
@@ -10,12 +10,12 @@ function NotFound() {
         <p className="not-found-code">404</p>
         <img src="/lightsaber.svg" alt="" className="saber-img" />
         <p className="not-found-line">
-          This is not the page you're looking for
+          This is not the page you're looking for.
         </p>
-        <p className="not-found-line">But you can still find your way home</p>
+        <p className="not-found-line">But you can still find your way home.</p>
         <Link to="/" className="not-found-home">
           <ArrowLeft size={14} />
-          home
+          back to portfolio
         </Link>
       </div>
     </div>

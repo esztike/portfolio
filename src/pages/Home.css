@@ -1,0 +1,235 @@
+/* === HOME: Hero === */
+
+.intro {
+  padding: 64px 0 32px;
+}
+
+.typed-headline {
+  font-family: var(--font-mono);
+  font-size: 56px;
+  min-height: 80px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  padding: 0 0 24px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.8em;
+  background: var(--color-text-primary);
+  margin-left: 3px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: blink 1s step-end infinite;
+}
+
+.bio-name {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--color-text-primary);
+}
+
+.bio {
+  font-family: var(--font-body);
+  font-size: 24px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 720px;
+}
+
+/* === HOME: Work Grid === */
+
+.work-section {
+  transform: none;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.work-label {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--color-text-heading);
+  display: block;
+  text-align: center;
+  margin: 32px 0 40px;
+}
+
+/* === HOME: Work Card === */
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: 4px 4px 16px 2px var(--color-shadow);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+  height: 100%;
+}
+
+.work-card:hover {
+  border-color: var(--color-accent);
+  background: var(--color-hover);
+}
+
+.work-card:hover .work-card-hero-img {
+  filter: brightness(1.08);
+}
+
+.work-card.inactive {
+  cursor: default;
+  box-shadow: none;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.work-card-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1;
+}
+
+.work-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 16px 20px;
+  flex: 1;
+}
+
+.work-card-visual-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.work-card-visual {
+  width: 100%;
+  height: 280px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.work-card-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: filter 0.2s ease;
+}
+
+/* === HOME: Work Card Badge === */
+
+.work-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: rgba(242, 204, 143, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.work-card-badge.coming-soon {
+  background: #ded5c8;
+  color: #3d405b;
+}
+
+/* === HOME: Work Card Tags === */
+
+.work-card-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.row-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-grey);
+  border: 0.5px solid var(--color-grey);
+  padding: 3px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.row-tag.inactive-tag {
+  color: #ded5c8;
+  border-color: #ded5c8;
+}
+
+/* === HOME: Work Card Typography === */
+
+.row-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--color-text-heading);
+  flex: 1;
+}
+
+.row-subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+/* === HOME: Responsive === */
+
+@media (max-width: 800px) {
+  .typed-headline {
+    font-size: 36px;
+    min-height: 56px;
+  }
+
+  .bio {
+    font-size: 18px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card {
+    height: auto;
+  }
+
+  .work-card-visual {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typed-headline {
+    font-size: 28px;
+    min-height: 44px;
+  }
+
+  .bio {
+    font-size: 16px;
+  }
+}

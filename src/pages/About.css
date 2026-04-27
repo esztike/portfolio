@@ -1,0 +1,214 @@
+/* === ABOUT: Hero === */
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--color-text-heading);
+  line-height: 1.1;
+  text-align: left;
+}
+
+.page-title .bio-name {
+  font-size: 2.5rem;
+}
+
+.about-profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-light);
+  background: var(--color-accent);
+  overflow: hidden;
+  object-fit: cover;
+  margin: var(--space-sm) auto 0;
+}
+
+.about-hero {
+  position: relative;
+  margin-bottom: var(--space-lg);
+}
+
+/* === ABOUT: Bio === */
+
+.about-bio p {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-sm);
+}
+
+.about-bio {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+/* === ABOUT: Experience === */
+
+.about-experience {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: var(--space-lg);
+}
+
+.about-exp-list {
+  flex: 0 0 55%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+}
+
+.about-exp-heading {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-sm);
+}
+
+.about-exp-entries {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-exp-entry {
+  display: grid;
+  grid-template-columns: 160px 1fr 120px;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border-light);
+  gap: 16px;
+}
+
+.about-exp-entry:last-child {
+  border-bottom: none;
+}
+
+.about-exp-company {
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  text-align: left;
+}
+
+.about-exp-title {
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  text-align: left;
+}
+
+.about-exp-year {
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  text-align: left;
+}
+
+/* === ABOUT: Skills === */
+
+.about-skills {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  margin-left: -40px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-sticky {
+  padding: 20px 24px;
+  border-radius: 4px;
+  box-shadow: 4px 4px 12px var(--color-border-light);
+  max-width: 280px;
+}
+
+.about-sticky.ux {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  margin-left: 24px;
+}
+
+.about-sticky.dev {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  margin-top: 20px;
+  margin-left: 8px;
+}
+
+.about-sticky-heading {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-text-heading);
+  margin-bottom: 10px;
+}
+
+.about-sticky p {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* === ABOUT: Responsive === */
+
+@media (max-width: 999px) {
+  .about-experience {
+    flex-direction: column;
+  }
+
+  .about-exp-list {
+    flex: none;
+    width: 100%;
+  }
+
+  .about-skills {
+    flex-direction: row;
+    width: 100%;
+    margin-left: 0;
+    order: -1;
+  }
+
+  .about-sticky {
+    flex: 1;
+    max-width: none;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 599px) {
+  .about-skills {
+    flex-direction: column;
+  }
+
+  .about-exp-entry {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+
+  .about-exp-company {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .about-exp-title {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .about-exp-year {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}

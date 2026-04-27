@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import "./Home.css";
 
 function Home() {
   const headlineRef = useRef(null); // the typing target

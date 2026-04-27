@@ -1,7 +1,9 @@
 import AboutContent from "../content/about.mdx";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import BeeScene from "../components/BeeScene";
 import avatar from "/src/assets/avatar-2.png";
+import "./About.css";
 
 function About() {
   return (

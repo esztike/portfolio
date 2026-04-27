@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Nav from "./components/layout/Nav";
 import Home from "./pages/Home";
-import Work from "./pages/Work";
+import TheMerge from "./pages/TheMerge";
 import About from "./pages/About";
 import ErrorSeries from "./pages/work/ErrorSeries";
 import SaasPlatform from "./pages/work/SaasPlatform";

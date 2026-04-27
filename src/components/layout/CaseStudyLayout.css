@@ -263,3 +263,34 @@
   margin: var(--space-sm) 0;
   display: block;
 }
+
+/* === CASE STUDY: Images === */
+
+.case-study-image {
+  overflow: visible;
+  padding-bottom: 2px;
+  margin-bottom: var(--space-sm);
+}
+
+.case-study-image--scroll {
+  overflow: visible;
+}
+
+.cs-scroll-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: grab;
+}
+
+.case-study-image--scroll .cs-visual {
+  max-width: none;
+  height: auto;
+  width: auto;
+  max-height: 480px;
+}
+
+@media (max-width: 800px) {
+  .case-study-image--scroll .cs-visual {
+    max-height: 280px;
+  }
+}
