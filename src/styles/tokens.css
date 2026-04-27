@@ -9,7 +9,7 @@
   /* Colors: roles */
   --color-bg: var(--color-indigo);
   --color-bg-gradient: linear-gradient(160deg, #3d405b, #2e3150);
-  --color-surface: rgba(61, 64, 91, 0.10);
+  --color-surface: rgba(61, 64, 91, 0.1);
   --color-border-light: rgba(242, 204, 143, 0.05);
   --color-border-subtle: rgba(242, 204, 143, 0.03);
   --color-shadow: rgba(242, 204, 143, 0.15);
@@ -37,11 +37,11 @@
   --font-mono: "DM Mono", "Courier New", monospace;
 
   /* Typescale */
-  --text-xs: 0.75rem;
-  --text-sm: 0.85rem;
-  --text-base: 1rem;
-  --text-lg: 1.25rem;
-  --text-xl: 1.5rem;
+  --text-xs: 0.875rem;
+  --text-sm: 1rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.375rem;
+  --text-xl: 1.625rem;
   --text-2xl: 2rem;
   --text-3xl: 3rem;
   --text-4xl: 4.5rem;
