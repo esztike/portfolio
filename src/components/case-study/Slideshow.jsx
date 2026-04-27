@@ -34,7 +34,7 @@ function Slideshow({ images = [], caption }) {
           <ChevronRight size={16} />
         </button>
       </div>
-      {caption && <p className="slideshow-caption">{caption}</p>}
+      {caption && <p className="caption">{caption}</p>}
     </div>
   );
 }

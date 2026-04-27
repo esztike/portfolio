@@ -243,6 +243,5 @@
   height: auto;
   border-radius: var(--radius-md);
   margin: var(--space-sm) 0;
-  margin: var(--space-md) 0;
   display: block;
 }

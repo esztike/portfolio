@@ -70,7 +70,7 @@ function VideoLink({ href, title, caption }) {
           )}
         </div>
       </motion.a>
-      {caption && <p className="video-link-caption">{caption}</p>}
+      {caption && <p className="caption">{caption}</p>}
     </div>
   );
 }

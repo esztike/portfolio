@@ -63,11 +63,3 @@
   background: var(--color-text-heading);
   opacity: 1;
 }
-
-.slideshow-caption {
-  margin-top: var(--space-xs);
-  font-family: var(--font-label);
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-  text-align: center;
-}
