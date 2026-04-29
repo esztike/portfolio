@@ -6,6 +6,7 @@
   color: var(--color-text-heading);
   line-height: 1.1;
   text-align: left;
+  font-weight: 400;
 }
 
 .page-title .bio-name {

@@ -1,8 +1,10 @@
 import { useRef, useEffect } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { useAnimation, useInView } from "framer-motion";
 import "./BeeScene.css";
 
-function BeeScene() {
+function BeeScene({ replay = 0 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
@@ -45,7 +47,7 @@ function BeeScene() {
     };
 
     animate();
-  }, [isInView, controls, daisyControls]);
+  }, [isInView, controls, daisyControls, replay]);
 
   return (
     <div className="bee-scene" ref={ref} aria-hidden="true">

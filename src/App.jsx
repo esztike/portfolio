@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Nav from "./components/layout/Nav";
 import Home from "./pages/Home";
-import TheMerge from "./pages/TheMerge";
 import About from "./pages/About";
+import TheMerge from "./pages/TheMerge";
 import ErrorSeries from "./pages/work/ErrorSeries";
 import SaasPlatform from "./pages/work/SaasPlatform";
 import SharedLanguage from "./pages/work/SharedLanguage";
@@ -38,6 +38,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/the-merge" element={<TheMerge />} />
         <Route path="/work/error-series" element={<ErrorSeries />} />
         <Route path="/work/saas-platform" element={<SaasPlatform />} />
         <Route path="/work/shared-language" element={<SharedLanguage />} />
@@ -47,6 +48,9 @@ function AppContent() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <footer className="site-footer">
+        <p className="colophon">
+          Designed and coded by me · React · Tailwind · Vercel · Set in DM Sans
+        </p>
         <p>© Eszti Hollenback 2026</p>
       </footer>
     </div>
