@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import CaseStudyLayout from "../../components/layout/CaseStudyLayout";
 
 const tldr = {
@@ -7,6 +6,7 @@ const tldr = {
   timeline: "2026",
   deliverables:
     "Case study microsite · Error taxonomy · Design principles · Episodic case study · Interactive prototype",
+  liveSite: "https://sofia-error-series.vercel.app",
   hook: (
     <>
       <p>
@@ -29,15 +29,6 @@ const tldr = {
         a single failure, moment by moment, and asks what recovering from it
         actually takes.
       </p>
-      <p className="tldr-cta">
-        <a
-          href="https://sofia-error-series.vercel.app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Microsite <ArrowRight size={16} aria-hidden="true" />
-        </a>
-      </p>
     </>
   ),
 };
@@ -48,7 +39,7 @@ function ErrorSeries() {
       <CaseStudyLayout
         title="Sofia, an error series"
         subtitle="Mapping how agentic AI fails, and designing for what comes after."
-        heroImage="/case-studies/globo/hero.png"
+        heroImage="/case-studies/error-series/hero.png"
         tldr={tldr}
         otherProjects={[
           { title: "Shared language", path: "/work/shared-language" },
@@ -57,6 +48,7 @@ function ErrorSeries() {
           { title: "Give InKind", path: "/work/give-inkind" },
           // { title: "Home Glamour", path: "/work/home-glamour" },
         ]}
+        noOtherProjectsDivider
       ></CaseStudyLayout>
     </>
   );

@@ -68,12 +68,11 @@ function Home() {
 
   const projects = [
     {
-      title: "Sofia Error Series",
+      title: "Sofia, an error series",
       subtitle: "Designing for human recovery in agentic AI systems",
-      tags: ["UX", "AI"],
-      color: "#DED5C8",
+      tags: ["UX", "AI", "DEV"],
+      image: "/case-studies/error-series/hero.png",
       path: "/work/error-series",
-      comingSoon: true,
     },
     {
       title: "Shared language",
@@ -105,14 +104,14 @@ function Home() {
       image: "/case-studies/give-inkind/hero.png",
       path: "/work/give-inkind",
     },
-    {
+    /* {
       title: "Home Glamour",
 
       subtitle: "A mobile app concept for home styling and personalisation",
       tags: ["UX"],
       image: "/case-studies/home-glamour/hero.png",
       path: "/work/home-glamour",
-    },
+    },*/
   ];
 
   return (

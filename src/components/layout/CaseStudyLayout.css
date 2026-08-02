@@ -148,6 +148,37 @@
   border-bottom: none;
 }
 
+.cs-meta-terminal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.terminal-prompt {
+  color: var(--color-text-secondary);
+}
+
+.terminal-cmd {
+  color: var(--color-text-heading);
+  transition: color 0.2s ease;
+}
+
+.cs-meta-terminal:hover .terminal-cmd {
+  color: var(--color-text-primary);
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 0.8em;
+  background: var(--color-accent);
+  margin-left: 2px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: blink 1s step-end infinite;
+}
+
 .cs-hook {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
@@ -204,6 +235,10 @@
   margin-top: var(--space-xl);
   padding-top: var(--space-md);
   border-top: 1px solid rgba(242, 204, 143, 0.25);
+}
+
+.cs-other-projects.no-divider {
+  border-top: none;
 }
 
 .cs-other-projects-label {

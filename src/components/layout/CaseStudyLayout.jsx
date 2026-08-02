@@ -11,6 +11,7 @@ function CaseStudyLayout({
   tldr,
   otherProjects,
   children,
+  noOtherProjectsDivider,
 }) {
   return (
     <main className="case-study-layout">
@@ -36,21 +37,48 @@ function CaseStudyLayout({
             <span className="cs-meta-value">{tldr.role}</span>
             <span className="cs-meta-key">TIMELINE</span>
             <span className="cs-meta-value">{tldr.timeline}</span>
-            <span className="cs-meta-key no-border">DELIVERABLES</span>
-            <span className="cs-meta-value no-border">{tldr.deliverables}</span>
+            <span className={`cs-meta-key${tldr.liveSite ? "" : " no-border"}`}>
+              DELIVERABLES
+            </span>
+            <span
+              className={`cs-meta-value${tldr.liveSite ? "" : " no-border"}`}
+            >
+              {tldr.deliverables}
+            </span>
+            {tldr.liveSite && (
+              <>
+                <span className="cs-meta-key no-border">LIVE SITE</span>
+                <span className="cs-meta-value no-border">
+                  <a
+                    href={tldr.liveSite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cs-meta-terminal"
+                  >
+                    <span className="terminal-prompt">$ open</span>
+                    <span className="terminal-cmd">
+                      {tldr.liveSite.replace(/^https?:\/\//, "")}
+                    </span>
+                    <span className="terminal-cursor"></span>
+                  </a>
+                </span>
+              </>
+            )}
           </div>
           <div className="cs-hook">{tldr.hook}</div>
         </div>
 
-        <div className="cs-audio-placeholder">
+        {/* <div className="cs-audio-placeholder">
           <Play size={12} />
           audio narration: coming soon
-        </div>
+        </div> */}
 
         <div className="cs-body">{children}</div>
 
         {otherProjects && otherProjects.length > 0 && (
-          <nav className="cs-other-projects">
+          <nav
+            className={`cs-other-projects${noOtherProjectsDivider ? " no-divider" : ""}`}
+          >
             <p className="cs-other-projects-label">Other works</p>
             <ul className="cs-other-projects-list">
               {otherProjects.map((p) => (
