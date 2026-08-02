@@ -38,10 +38,11 @@ function SharedLanguage() {
       heroImage="/case-studies/shared-language/hero.png"
       tldr={tldr}
       otherProjects={[
+        { title: "Sofia, an error series", path: "/work/error-series" },
         { title: "Travel better: Globo", path: "/work/globo" },
         { title: "Scalable SaaS platform", path: "/work/saas-platform" },
         { title: "Give InKind", path: "/work/give-inkind" },
-        { title: "Home Glamour", path: "/work/home-glamour" },
+        // { title: "Home Glamour", path: "/work/home-glamour" },
       ]}
     >
       <SharedLanguageContent components={{ Slideshow }} />

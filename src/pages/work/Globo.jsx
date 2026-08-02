@@ -36,10 +36,11 @@ function Globo() {
         heroImage="/case-studies/globo/hero.png"
         tldr={tldr}
         otherProjects={[
+          { title: "Sofia, an error series", path: "/work/error-series" },
           { title: "Shared language", path: "/work/shared-language" },
           { title: "Scalable SaaS platform", path: "/work/saas-platform" },
           { title: "Give InKind", path: "/work/give-inkind" },
-          { title: "Home Glamour", path: "/work/home-glamour" },
+          // { title: "Home Glamour", path: "/work/home-glamour" },
         ]}
       >
         <GloboContent components={{ Slideshow }} />

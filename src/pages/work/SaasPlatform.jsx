@@ -37,10 +37,11 @@ function SaasPlatform() {
       heroImage="/case-studies/saas-platform/hero.png"
       tldr={tldr}
       otherProjects={[
+        { title: "Sofia, an error series", path: "/work/error-series" },
         { title: "Shared language", path: "/work/shared-language" },
         { title: "Travel better: Globo", path: "/work/globo" },
         { title: "Give InKind", path: "/work/give-inkind" },
-        { title: "Home Glamour", path: "/work/home-glamour" },
+        // { title: "Home Glamour", path: "/work/home-glamour" },
       ]}
     >
       <SaasContent />
