@@ -32,7 +32,7 @@ function TextFlip() {
           </motion.span>
         </AnimatePresence>
       </div>
-      <h1 className="textflip-heading">The merge</h1>
+      <h1 className="textflip-heading">code lab</h1>
       <p className="textflip-sub">
         A space where design intuition meets code. Experiments, small builds,
         things made to see if they could be.

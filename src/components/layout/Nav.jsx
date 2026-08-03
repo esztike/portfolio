@@ -27,9 +27,9 @@ function Nav() {
               <NavLink to="/about" className="nav-tab">
                 about
               </NavLink>
-              <NavLink to="/the-merge" className="nav-tab">
-                the merge
-              </NavLink>
+              {/* <NavLink to="/code-lab" className="nav-tab">
+                code lab
+              </NavLink> */}
             </div>
           </div>
           <div className="nav-socials">
@@ -111,13 +111,13 @@ function Nav() {
             >
               about
             </NavLink>
-            <NavLink
-              to="/the-merge"
+            {/* <NavLink
+              to="/code-lab"
               className="nav-dropdown-link"
               onClick={() => setIsOpen(false)}
-            >
-              the merge
-            </NavLink>
+            
+              code lab
+            </NavLink> */}
             <a
               href="https://www.linkedin.com/in/esztihollenback"
               target="_blank"

@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Nav from "./components/layout/Nav";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import TheMerge from "./pages/TheMerge";
+import CodeLab from "./pages/CodeLab";
 import ErrorSeries from "./pages/work/ErrorSeries";
 import SaasPlatform from "./pages/work/SaasPlatform";
 import SharedLanguage from "./pages/work/SharedLanguage";
@@ -38,7 +38,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/the-merge" element={<TheMerge />} />
+        <Route path="/code-lab" element={<CodeLab />} />
         <Route path="/work/error-series" element={<ErrorSeries />} />
         <Route path="/work/saas-platform" element={<SaasPlatform />} />
         <Route path="/work/shared-language" element={<SharedLanguage />} />

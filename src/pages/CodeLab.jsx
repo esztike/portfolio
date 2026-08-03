@@ -12,7 +12,7 @@ await beeControls.start({ x: beeX, y: [0, -30, 10, -25, 8, -15, 0] })
 // flower sways in response
 await daisyControls.start({ rotate: [0, -8, 4, -5, 2, 0] })`;
 
-function TheMerge() {
+function CodeLab() {
   const [replay, setReplay] = useState(0);
 
   return (
@@ -37,4 +37,4 @@ function TheMerge() {
   );
 }
 
-export default TheMerge;
+export default CodeLab;
