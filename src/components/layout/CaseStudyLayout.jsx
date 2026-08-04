@@ -11,8 +11,9 @@ function CaseStudyLayout({
   tldr,
   otherProjects,
   children,
-  noOtherProjectsDivider,
+  showAudioPlaceholder = true,
 }) {
+  const hasBody = Boolean(children);
   return (
     <main className="case-study-layout">
       <Link to="/" className="cs-back-nav-top">
@@ -28,7 +29,7 @@ function CaseStudyLayout({
       <div className="cs-container">
         <h1 className="cs-title">{title}</h1>
         {subtitle && <p className="cs-subtitle">{subtitle}</p>}
-        <div className="cs-tldr">
+        <div className={`cs-tldr${hasBody ? "" : " cs-tldr-no-bottom"}`}>
           <span className="cs-tldr-label">&lt;tl;dr&gt;</span>
           <div className="cs-meta">
             <span className="cs-meta-key">PROJECT</span>
@@ -68,17 +69,17 @@ function CaseStudyLayout({
           <div className="cs-hook">{tldr.hook}</div>
         </div>
 
-        {/* <div className="cs-audio-placeholder">
-          <Play size={12} />
-          audio narration: coming soon
-        </div> */}
+        {showAudioPlaceholder && (
+          <div className="cs-audio-placeholder">
+            <Play size={12} />
+            audio narration: coming soon
+          </div>
+        )}
 
         <div className="cs-body">{children}</div>
 
         {otherProjects && otherProjects.length > 0 && (
-          <nav
-            className={`cs-other-projects${noOtherProjectsDivider ? " no-divider" : ""}`}
-          >
+          <nav className="cs-other-projects">
             <p className="cs-other-projects-label">Other works</p>
             <ul className="cs-other-projects-list">
               {otherProjects.map((p) => (

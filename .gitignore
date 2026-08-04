@@ -63,6 +63,9 @@ lib-cov
 bower_components
 web_modules/
 
+# Claude project state (deliberately unversioned)
+_claude/
+
 # Editor
 .vscode/*
 !.vscode/extensions.json

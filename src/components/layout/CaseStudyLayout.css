@@ -111,6 +111,10 @@
   margin-bottom: var(--space-lg);
 }
 
+.cs-tldr-no-bottom {
+  border-bottom: none;
+}
+
 .cs-tldr-label {
   display: inline-block;
   font-family: var(--font-mono);
@@ -235,10 +239,6 @@
   margin-top: var(--space-xl);
   padding-top: var(--space-md);
   border-top: 1px solid rgba(242, 204, 143, 0.25);
-}
-
-.cs-other-projects.no-divider {
-  border-top: none;
 }
 
 .cs-other-projects-label {

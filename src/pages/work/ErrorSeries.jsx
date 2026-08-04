@@ -48,7 +48,7 @@ function ErrorSeries() {
           { title: "Give InKind", path: "/work/give-inkind" },
           // { title: "Home Glamour", path: "/work/home-glamour" },
         ]}
-        noOtherProjectsDivider
+        showAudioPlaceholder={false}
       ></CaseStudyLayout>
     </>
   );
