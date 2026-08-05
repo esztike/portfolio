@@ -1,4 +1,5 @@
 import CaseStudyLayout from "../../components/layout/CaseStudyLayout";
+import { ExternalLink } from "lucide-react";
 
 const tldr = {
   project: "Design exploration: error recovery and prevention in agentic AI",
@@ -10,24 +11,29 @@ const tldr = {
   hook: (
     <>
       <p>
-        For decades, human-centered design meant putting people at the center:
-        understand their needs, build tools that serve them directly. AI moved
-        into the middle, and design's job became shaping the behavior of an
-        intermediary that thinks, infers, and sometimes gets things wrong in
-        ways a button simply couldn't. Agentic AI raises the stakes again: this
-        intermediary acts on its own, often while you're not watching.
+        Human-centered design used to mean building tools that serve people
+        directly. AI moved into the middle, and design's job became shaping the
+        behavior of an intermediary that thinks, infers, and sometimes gets
+        things wrong. Agentic AI raises the stakes again. It acts on its own,
+        often while we're not watching. Designers now should think of ways to
+        make delegation safe, so that when a system acts on our behalf, we can
+        trust it, correct it, and recover when it fails.
       </p>
+
       <p>
-        The designer's job now is to make delegation safe: to ensure that when a
-        system acts on your behalf, you can trust it, correct it, and recover
-        when it fails. Sofia, Greek for wisdom, is a design exploration of
-        exactly that problem, and a personal one.
-      </p>
-      <p>
-        An error taxonomy, a set of design principles, and an interactive
-        prototype ground the thinking in something buildable. Episode one traces
-        a single failure, moment by moment, and asks what recovering from it
-        actually takes.
+        Sofia, an error series, is a design exploration. Written as a case study
+        microsite, it comprises an error taxonomy, a set of design principles,
+        and an interactive prototype to ground the thinking in something
+        buildable. Episode one traces a partial completion failure, and presents
+        what recovering from it actually takes.{" "}
+        <a
+          href="https://sofia-error-series.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cs-hook-link"
+        >
+          Visit the microsite <ExternalLink size={12} />
+        </a>
       </p>
     </>
   ),

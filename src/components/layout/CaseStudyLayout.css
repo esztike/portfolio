@@ -194,6 +194,21 @@
   margin-bottom: var(--space-xs);
 }
 
+.cs-hook-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-heading);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cs-hook-link:hover {
+  color: var(--color-text-primary);
+}
+
 .cs-audio-placeholder {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
@@ -235,14 +250,15 @@
   margin-bottom: var(--space-sm);
 }
 
-.cs-body a {
-  color: var(--color-link);
-  text-decoration: underline;
+.cs-body-link {
+  font-family: var(--font-mono);
+  color: var(--color-text-heading);
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.cs-body a:hover {
-  color: var(--color-link-hover);
+.cs-body-link:hover {
+  color: var(--color-text-primary);
 }
 
 .cs-other-projects {

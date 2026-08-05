@@ -64,7 +64,9 @@ bower_components
 web_modules/
 
 # Claude project state (deliberately unversioned)
-_claude/
+CLAUDE.md
+TOI.md
+PROJECTSTATE.md
 
 # Editor
 .vscode/*
