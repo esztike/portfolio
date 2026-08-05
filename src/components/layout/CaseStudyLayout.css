@@ -235,6 +235,16 @@
   margin-bottom: var(--space-sm);
 }
 
+.cs-body a {
+  color: var(--color-link);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.cs-body a:hover {
+  color: var(--color-link-hover);
+}
+
 .cs-other-projects {
   margin-top: var(--space-xl);
   padding-top: var(--space-md);
