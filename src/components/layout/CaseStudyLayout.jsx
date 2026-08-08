@@ -3,6 +3,7 @@ import "./CaseStudyLayout.css";
 import CaseStudyHero from "../case-study/CaseStudyHero";
 import ScrollToTop from "../ui/ScrollToTop";
 import { ChevronRight, ArrowLeft, Play } from "lucide-react";
+import CaseStudyAudioPlayer from "../case-study/CaseStudyAudioPlayer";
 
 function CaseStudyLayout({
   title,
@@ -12,6 +13,7 @@ function CaseStudyLayout({
   otherProjects,
   children,
   showAudioPlaceholder = true,
+  audioSrc,
 }) {
   const hasBody = Boolean(children);
   return (
@@ -69,12 +71,14 @@ function CaseStudyLayout({
           <div className="cs-hook">{tldr.hook}</div>
         </div>
 
-        {showAudioPlaceholder && (
+        {audioSrc ? (
+          <CaseStudyAudioPlayer src={audioSrc} />
+        ) : showAudioPlaceholder ? (
           <div className="cs-audio-placeholder">
-            <Play size={12} />
-            audio narration: coming soon
+            <Play size={16} />
+            case study narration: coming soon
           </div>
-        )}
+        ) : null}
 
         <div className="cs-body">{children}</div>
 

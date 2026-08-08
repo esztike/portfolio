@@ -1,0 +1,76 @@
+.cs-audio-player {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cs-audio-label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cs-audio-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cs-audio-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-link);
+  display: flex;
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+
+.cs-audio-button:hover {
+  color: var(--color-link-hover);
+}
+
+.cs-audio-time {
+  flex-shrink: 0;
+  white-space: nowrap;
+  color: var(--color-text-secondary);
+}
+
+.cs-audio-scrubber {
+  flex: 1;
+  margin-left: 24px;
+  height: 8px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--color-border-light);
+  border-radius: 999px;
+  outline: none;
+}
+
+.cs-audio-scrubber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  border: 3px solid var(--color-link);
+  cursor: pointer;
+}
+
+.cs-audio-scrubber::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  border: 3px solid var(--color-link);
+  cursor: pointer;
+}

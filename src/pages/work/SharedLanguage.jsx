@@ -1,6 +1,7 @@
 import CaseStudyLayout from "../../components/layout/CaseStudyLayout";
 import SharedLanguageContent from "../../content/shared-language.mdx";
 import Slideshow from "../../components/case-study/Slideshow";
+import CaseStudyAudioPlayer from "../../components/case-study/CaseStudyAudioPlayer";
 
 const tldr = {
   project: "Design system - enterprise SaaS platform",
@@ -37,6 +38,7 @@ function SharedLanguage() {
       subtitle="Building a design system for an enterprise SaaS platform"
       heroImage="/case-studies/shared-language/hero.png"
       tldr={tldr}
+      audioSrc="/audio/shared-language.mp3"
       otherProjects={[
         { title: "Sofia, an error series", path: "/work/error-series" },
         { title: "Travel better: Globo", path: "/work/globo" },
