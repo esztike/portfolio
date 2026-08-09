@@ -35,6 +35,7 @@ function Globo() {
         subtitle="Mapping the emotional weight of travel and designing for it"
         heroImage="/case-studies/globo/hero.png"
         tldr={tldr}
+        audioSrc="/audio/globo.mp3"
         otherProjects={[
           { title: "Sofia, an error series", path: "/work/error-series" },
           { title: "Shared language", path: "/work/shared-language" },

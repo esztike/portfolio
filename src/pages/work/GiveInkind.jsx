@@ -38,6 +38,7 @@ function GiveInKind() {
       subtitle="A UX case study about rebuilding Give InKind's website with a mobile-first, responsive approach"
       heroImage="/case-studies/give-inkind/hero.png"
       tldr={tldr}
+      audioSrc="/audio/give-inkind.mp3"
       otherProjects={[
         { title: "Sofia, an error series", path: "/work/error-series" },
         { title: "Shared language", path: "/work/shared-language" },

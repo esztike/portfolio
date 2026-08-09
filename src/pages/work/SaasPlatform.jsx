@@ -36,6 +36,7 @@ function SaasPlatform() {
       subtitle="End-to-end UX for a Deloitte Digital enterprise product"
       heroImage="/case-studies/saas-platform/hero.png"
       tldr={tldr}
+      audioSrc="/audio/saas.mp3"
       otherProjects={[
         { title: "Sofia, an error series", path: "/work/error-series" },
         { title: "Shared language", path: "/work/shared-language" },
