@@ -66,6 +66,10 @@ video {
   color: var(--color-text-secondary);
 }
 
+.copyright {
+  margin-top: var(--space-xs);
+}
+
 /* === ANIMATIONS === */
 
 @keyframes blink {

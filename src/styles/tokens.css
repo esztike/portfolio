@@ -6,25 +6,42 @@
   --color-warm-white: #f4f1de;
   --color-grey: #ded5c8;
 
+  /* Colors: alphas */
+  --color-yellow-alpha-05: rgba(242, 204, 143, 0.05);
+  --color-yellow-alpha-10: rgba(242, 204, 143, 0.1);
+  --color-yellow-alpha-12: rgba(242, 204, 143, 0.12);
+  --color-yellow-alpha-13: rgba(242, 204, 143, 0.13);
+  --color-yellow-alpha-15: rgba(242, 204, 143, 0.15);
+  --color-yellow-alpha-25: rgba(242, 204, 143, 0.25);
+  --color-yellow-alpha-50: rgba(242, 204, 143, 0.5);
+  --color-indigo-alpha-10: rgba(61, 64, 91, 0.1);
+  --color-indigo-alpha-60: rgba(61, 64, 91, 0.6);
+  --color-orange-alpha-50: rgba(224, 122, 87, 0.5);
+  --color-warm-white-alpha-80: rgba(244, 241, 222, 0.8);
+  --color-grey-alpha-50: rgba(222, 213, 200, 0.5);
+
   /* Colors: roles */
   --color-bg: var(--color-indigo);
   --color-bg-gradient: linear-gradient(160deg, #3d405b, #2e3150);
-  --color-surface: rgba(61, 64, 91, 0.1);
-  --color-border-light: rgba(242, 204, 143, 0.05);
-  --color-border-subtle: rgba(242, 204, 143, 0.03);
-  --color-shadow: rgba(242, 204, 143, 0.15);
+  --color-surface: var(--color-indigo-alpha-10);
+  --color-border-light: var(--color-yellow-alpha-05);
+  --color-border-medium: var(--color-yellow-alpha-25);
+  --color-shadow: var(--color-yellow-alpha-15);
+  --color-fill-muted: var(--color-yellow-alpha-15);
   --color-text-heading: var(--color-yellow);
   --color-text-primary: var(--color-warm-white);
-  --color-text-secondary: rgba(244, 241, 222, 0.8);
+  --color-text-secondary: var(--color-warm-white-alpha-80);
   --color-accent: var(--color-orange);
+  --color-skeleton-bg: var(--color-yellow-alpha-10);
+  --color-skeleton-shimmer: var(--color-yellow-alpha-13);
 
   /* Colors: states */
-  --color-hover: rgba(242, 204, 143, 0.12);
+  --color-hover: var(--color-yellow-alpha-12);
   --color-disabled: var(--color-grey);
-  --color-placeholder: rgba(222, 213, 200, 0.5);
+  --color-placeholder: var(--color-grey-alpha-50);
   --color-link: var(--color-yellow);
   --color-link-hover: var(--color-warm-white);
-  --color-selected: rgba(242, 204, 143, 0.05);
+  --color-selected: var(--color-yellow-alpha-05);
 
   /* Colors: legacy aliases - remove once index.css is fully migrated */
   --color-dark: var(--color-indigo);

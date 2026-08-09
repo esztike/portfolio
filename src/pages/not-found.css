@@ -51,8 +51,9 @@
   width: 280px;
   margin: var(--space-md) 0;
   transform: scaleX(-1);
-  filter: drop-shadow(0 0 6px #f2cc8f) drop-shadow(0 0 18px #f2cc8f)
-    drop-shadow(0 0 40px rgba(242, 204, 143, 0.5));
+  filter: drop-shadow(0 0 6px var(--color-yellow))
+    drop-shadow(0 0 18px var(--color-yellow))
+    drop-shadow(0 0 40px var(--color-yellow-alpha-50));
 }
 
 .not-found-home {

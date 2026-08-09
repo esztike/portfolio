@@ -8,7 +8,7 @@ Live site: esztihollenback.com
 
 - Vite
 - React
-- Tailwind CSS
+- CSS custom properties (design tokens)
 - React Router v6
 - MDX (`@mdx-js/rollup`)
 - Framer Motion
@@ -22,7 +22,7 @@ When I started my UX career, Webflow seemed like the right choice to showcase my
 ## Notable decisions
 
 - Case study content lives in MDX. A templated CMS layout would force every case study into one shape. Chunking components let each case study's layout follow its own story, living on its own route. As for what components could be shared, that was a decision before writing any code.
-- Design tokens (`tokens.css`) centralize the site's color, spacing and type values in one location, the same way a design system does in Figma. Translating that logic into code was one of the most exciting parts of building this project. 
+- Design tokens (`tokens.css`) centralize the site's color, spacing and type values in one location, the same way a design system does in Figma. Translating that logic into code was one of the most exciting parts of building this project.
 
 ## Status
 

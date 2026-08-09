@@ -49,9 +49,10 @@ function AppContent() {
       </Routes>
       <footer className="site-footer">
         <p className="colophon">
-          Designed and coded by me · React · Tailwind · Vercel · Set in DM Sans
+          Designed and coded by me · React · Custom CSS properties · Vercel ·
+          Set in DM Sans
         </p>
-        <p>© Eszti Hollenback 2026</p>
+        <p className="copyright">© Eszti Hollenback 2026</p>
       </footer>
     </div>
   );

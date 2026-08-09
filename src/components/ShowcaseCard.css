@@ -12,7 +12,7 @@
 
 .showcase-frame {
   background: #0a1120;
-  border: 0.5px solid rgba(242, 204, 143, 0.2);
+  border: 0.5px solid var(--color-border-medium);
   border-radius: var(--radius-md);
   min-height: 320px;
   display: flex;
@@ -23,7 +23,7 @@
 
 .showcase-frame-bar {
   height: 32px;
-  border-bottom: 0.5px solid rgba(242, 204, 143, 0.08);
+  border-bottom: 0.5px solid var(--color-border-light);
   display: flex;
   align-items: center;
   padding: 0 14px;
@@ -35,7 +35,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(242, 204, 143, 0.5);
+  background: var(--color-yellow-alpha-50);
   display: block;
 }
 

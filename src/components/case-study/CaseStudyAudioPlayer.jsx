@@ -78,7 +78,7 @@ function CaseStudyAudioPlayer({ src }) {
           value={currentTime}
           onChange={handleScrub}
           style={{
-            background: `linear-gradient(to right, var(--color-link) ${progressPercent}%, rgba(242, 204, 143, 0.15) ${progressPercent}%)`,
+            background: `linear-gradient(to right, var(--color-link) ${progressPercent}%, var(--color-fill-muted) ${progressPercent}%)`,
           }}
         />
       </div>
