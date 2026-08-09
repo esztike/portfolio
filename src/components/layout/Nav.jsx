@@ -10,8 +10,7 @@ function Nav() {
   return (
     <>
       <header
-        className="nav-header"
-        // backdrop-filter inline — Tailwind build overrides CSS version, revisit in tokens phase
+        className="nav-header" // backdrop-filter inline — Vite's production CSS minifier drops unprefixed backdrop-filter, see PROJECTSATE.md
         style={{
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)",
