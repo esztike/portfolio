@@ -7,7 +7,7 @@ const tldr = {
   timeline: "2026",
   deliverables:
     "Case study microsite · Error taxonomy · Design principles · Episodic case study · Interactive prototype",
-  liveSite: "https://sofia-error-series.vercel.app",
+  // liveSite: "https://sofia-error-series.vercel.app",
   hook: (
     <>
       <p>
