@@ -40,7 +40,7 @@ function SharedLanguage() {
       tldr={tldr}
       audioSrc="/audio/shared-language.mp3"
       otherProjects={[
-        { title: "Sofia, an error series", path: "/work/error-series" },
+        { title: "Sofia Error Series", path: "/work/error-series" },
         { title: "Travel better: Globo", path: "/work/globo" },
         { title: "Scalable SaaS platform", path: "/work/saas-platform" },
         { title: "Give InKind", path: "/work/give-inkind" },

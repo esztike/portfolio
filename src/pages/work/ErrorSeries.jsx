@@ -21,7 +21,7 @@ const tldr = {
       </p>
 
       <p>
-        Sofia, an error series, is a design exploration. Written as a case study
+        Sofia Error Series, is a design exploration. Written as a case study
         microsite, it comprises an error taxonomy, a set of design principles,
         and an interactive prototype to ground the thinking in something
         buildable. Episode one traces a partial completion failure, and presents
@@ -43,7 +43,7 @@ function ErrorSeries() {
   return (
     <>
       <CaseStudyLayout
-        title="Sofia, an error series"
+        title="Sofia Error Series"
         subtitle="Mapping how agentic AI fails, and designing for what comes after."
         heroImage="/case-studies/error-series/hero.png"
         tldr={tldr}

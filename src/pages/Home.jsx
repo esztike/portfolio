@@ -68,7 +68,7 @@ function Home() {
 
   const projects = [
     {
-      title: "Sofia, an error series",
+      title: "Sofia Error Series",
       subtitle: "Designing for human recovery in agentic AI systems",
       tags: ["UX", "AI", "DEV"],
       image: "/case-studies/error-series/hero.png",

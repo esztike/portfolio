@@ -39,7 +39,7 @@ function HomeGlamour() {
         heroImage="/case-studies/home-glamour/hero.png"
         tldr={tldr}
         otherProjects={[
-          { title: "Sofia, an error series", path: "/work/error-series" },
+          { title: "Sofia Error Series", path: "/work/error-series" },
           { title: "Shared language", path: "/work/shared-language" },
           { title: "Travel better: Globo", path: "/work/globo" },
           { title: "Scalable SaaS platform", path: "/work/saas-platform" },
