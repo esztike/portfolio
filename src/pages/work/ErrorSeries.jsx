@@ -21,7 +21,7 @@ const tldr = {
       </p>
 
       <p>
-        Sofia Error Series, is a design exploration. Written as a case study
+        Sofia Error Series is a design exploration. Written as a case study
         microsite, it comprises an error taxonomy, a set of design principles,
         and an interactive prototype to ground the thinking in something
         buildable. Episode one traces a partial completion failure, and presents
