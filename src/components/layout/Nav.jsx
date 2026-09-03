@@ -23,12 +23,12 @@ function Nav() {
               <NavLink to="/" className="nav-tab">
                 work
               </NavLink>
+              <NavLink to="/code-lab" className="nav-tab">
+                code lab
+              </NavLink>
               <NavLink to="/about" className="nav-tab">
                 about
               </NavLink>
-              {/* <NavLink to="/code-lab" className="nav-tab">
-                code lab
-              </NavLink> */}
             </div>
           </div>
           <div className="nav-socials">
@@ -104,19 +104,20 @@ function Nav() {
               work
             </NavLink>
             <NavLink
+              to="/code-lab"
+              className="nav-dropdown-link"
+              onClick={() => setIsOpen(false)}
+            >
+              code lab
+            </NavLink>
+            <NavLink
               to="/about"
               className="nav-dropdown-link"
               onClick={() => setIsOpen(false)}
             >
               about
             </NavLink>
-            {/* <NavLink
-              to="/code-lab"
-              className="nav-dropdown-link"
-              onClick={() => setIsOpen(false)}
-            
-              code lab
-            </NavLink> */}
+
             <a
               href="https://www.linkedin.com/in/esztihollenback"
               target="_blank"

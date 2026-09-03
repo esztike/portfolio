@@ -17,7 +17,7 @@ function TextFlip() {
   }, []);
 
   return (
-    <div className="textflip-wraper">
+    <div className="textflip-wrapper">
       <div className="textflip-word-container">
         <AnimatePresence mode="wait">
           <motion.span

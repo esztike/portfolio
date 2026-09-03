@@ -3,14 +3,33 @@ import TextFlip from "../components/TextFlip";
 import ShowcaseCard from "../components/ShowcaseCard";
 import BeeScene from "../components/BeeScene";
 
-const beeSnippet = `const beeControls = useAnimation()
-const daisyControls = useAnimation()
+const portfolioSnippet = `
+/* Colors: base */
+--color-yellow: #f2cc8f;
 
-// bee drifts in, bobs on landing
-await beeControls.start({ x: beeX, y: [0, -30, 10, -25, 8, -15, 0] })
+/* Colors: alphas */
+--color-yellow-alpha-05: rgba(242, 204, 143, 0.05);
+--color-yellow-alpha-25: rgba(242, 204, 143, 0.25);
 
-// flower sways in response
-await daisyControls.start({ rotate: [0, -8, 4, -5, 2, 0] })`;
+/* Colors: semantic roles */
+--color-text-heading: var(--color-yellow);
+--color-border-light: var(--color-yellow-alpha-05);
+--color-border-medium: var(--color-yellow-alpha-25);`;
+
+const sofiaSnippet = `// Fires when a card's OPEN animation finishes — layout is fully settled
+// by then, so this is the one reliable moment to snap its header to the
+// top of the viewport instead of leaving the reader wherever they landed.
+const handleAccordionContentAnimationEnd = (event, tabValue) => {
+  if (
+    event.animationName === "walkthrough-accordion-slide-down" &&
+    tabValue === accordionValue
+  ) {
+    triggerRefs.current[tabValue]?.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
+  }
+};`;
 
 function CodeLab() {
   const [replay, setReplay] = useState(0);
@@ -25,9 +44,22 @@ function CodeLab() {
     >
       <TextFlip />
       <ShowcaseCard
-        title="01 - the bee"
-        story="In Hawaiʻi I built a honey brand. The bee stayed with me. Built with Framer Motion — two animations running in parallel, a drift and a sway, timed to feel like they belong together."
-        snippet={beeSnippet}
+        title="color as a system"
+        story="The portfolio you're reading is hand-coded in React. Its color system is a token cascade, i.e. raw values feed alpha variants and those feed semantic roles. The whole palette shifts from one place, the way design tokens work in Figma."
+        githubUrl="https://github.com/esztike/portfolio"
+        liveUrl="https://esztihollenback.com"
+        snippet={portfolioSnippet}
+      />
+      <ShowcaseCard
+        title="scroll snap"
+        story="From Sofia Error Series microsite. When a walkthrough card opens, this waits for the animation to finish, then snaps the card's header to the top of the viewport so the reader's eyes land where they expect."
+        githubUrl="https://github.com/esztike/sofia-error-series"
+        liveUrl="https://sofia-error-series.vercel.app/"
+        snippet={sofiaSnippet}
+      />
+      <ShowcaseCard
+        title="parallel motion"
+        story="In Hawaiʻi I built a honey brand. While I moved away, the bee stayed with me. Two animations running in parallel, a drift and a sway, timed to feel like they belong together. Built with Framer Motion."
         githubUrl="https://github.com/esztike"
         onReplay={() => setReplay((prev) => prev + 1)}
       >
