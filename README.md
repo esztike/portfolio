@@ -9,7 +9,7 @@ Live site: esztihollenback.com
 - Vite
 - React
 - CSS custom properties (design tokens)
-- React Router v6
+- React Router v7
 - MDX (`@mdx-js/rollup`)
 - Framer Motion
 - Lucide React
