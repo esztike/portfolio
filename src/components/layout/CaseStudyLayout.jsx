@@ -24,7 +24,7 @@ function CaseStudyLayout({
           <span className="g2">‹</span>
           <span className="g3">‹</span>
         </span>
-        work
+        home
       </Link>
       <CaseStudyHero src={heroImage} color={heroImage} />
 
@@ -103,7 +103,7 @@ function CaseStudyLayout({
 
         <Link to="/" className="cs-back-nav-bottom">
           <ArrowLeft size={14} />
-          back to work
+          home
         </Link>
       </div>
       <ScrollToTop />

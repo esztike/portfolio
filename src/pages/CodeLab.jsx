@@ -47,7 +47,7 @@ function CodeLab() {
         title="color as a system"
         story="The portfolio you're reading is hand-coded in React. Its color system is a token cascade, i.e. raw values feed alpha variants and those feed semantic roles. The whole palette shifts from one place, the way design tokens work in Figma."
         githubUrl="https://github.com/esztike/portfolio"
-        liveUrl="https://esztihollenback.com"
+        liveLabel="live site (you're on it)"
         snippet={portfolioSnippet}
       />
       <ShowcaseCard

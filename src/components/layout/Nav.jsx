@@ -21,7 +21,7 @@ function Nav() {
           <div className="nav-center">
             <div className="nav-tab-group">
               <NavLink to="/" className="nav-tab">
-                work
+                design
               </NavLink>
               <NavLink to="/code-lab" className="nav-tab">
                 code lab
@@ -101,7 +101,7 @@ function Nav() {
               className="nav-dropdown-link"
               onClick={() => setIsOpen(false)}
             >
-              work
+              design
             </NavLink>
             <NavLink
               to="/code-lab"

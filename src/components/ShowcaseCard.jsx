@@ -6,6 +6,7 @@ function ShowcaseCard({
   story,
   githubUrl,
   liveUrl,
+  liveLabel,
   onReplay,
   snippet,
   children,
@@ -41,7 +42,7 @@ function ShowcaseCard({
           )}
         </div>
       </div>
-      {(githubUrl || liveUrl) && (
+      {(githubUrl || liveUrl || liveLabel) && (
         <div className="showcase-links">
           {githubUrl && (
             <a
@@ -63,6 +64,7 @@ function ShowcaseCard({
               live site
             </a>
           )}
+          {liveLabel && <span className="showcase-note">{liveLabel}</span>}
         </div>
       )}
     </section>
