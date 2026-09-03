@@ -45,7 +45,7 @@ function CodeLab() {
       <TextFlip />
       <ShowcaseCard
         title="color as a system"
-        story="The portfolio you're reading is hand-coded in React. Its color system is a token cascade, i.e. raw values feed alpha variants and those feed semantic roles. The whole palette shifts from one place, the way design tokens work in Figma."
+        story="The portfolio you're reading is hand-coded in React. Its color system is a token cascade, i.e. raw values feed alpha variants which feed semantic roles. Change one value and the whole palette follows, the same way variables work in Figma."
         githubUrl="https://github.com/esztike/portfolio"
         liveLabel="live site (you're on it)"
         snippet={portfolioSnippet}
