@@ -65,41 +65,41 @@ export default async function middleware(request) {
 
   html = html.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
   html = html.replace(
-    /(<meta name="description" content=")[^"]*(")/,
+    /(<meta\s+name="description"\s+content=")[^"]*(")/,
     `$1${meta.description}$2`,
   );
   html = html.replace(
-    /(<meta property="og:title" content=")[^"]*(")/,
+    /(<meta\s+property="og:title"\s+content=")[^"]*(")/,
     `$1${meta.title}$2`,
   );
   html = html.replace(
-    /(<meta property="og:description" content=")[^"]*(")/,
+    /(<meta\s+property="og:description"\s+content=")[^"]*(")/,
     `$1${meta.description}$2`,
   );
   html = html.replace(
-    /(<meta property="og:url" content=")[^"]*(")/,
+    /(<meta\s+property="og:url"\s+content=")[^"]*(")/,
     `$1${url.href}$2`,
   );
   html = html.replace(
-    /(<link rel="canonical" href=")[^"]*(")/,
+    /(<link\s+rel="canonical"\s+href=")[^"]*(")/,
     `$1${url.href}$2`,
   );
   html = html.replace(
-    /(<meta name="twitter:title" content=")[^"]*(")/,
+    /(<meta\s+name="twitter:title"\s+content=")[^"]*(")/,
     `$1${meta.title}$2`,
   );
   html = html.replace(
-    /(<meta name="twitter:description" content=")[^"]*(")/,
+    /(<meta\s+name="twitter:description"\s+content=")[^"]*(")/,
     `$1${meta.description}$2`,
   );
 
   if (meta.image) {
     html = html.replace(
-      /(<meta property="og:image" content=")[^"]*(")/,
+      /(<meta\s+property="og:image"\s+content=")[^"]*(")/,
       `$1${meta.image}$2`,
     );
     html = html.replace(
-      /(<meta name="twitter:image" content=")[^"]*(")/,
+      /(<meta\s+name="twitter:image"\s+content=")[^"]*(")/,
       `$1${meta.image}$2`,
     );
   }
