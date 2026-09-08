@@ -53,6 +53,10 @@
   gap: 24px;
 }
 
+.featured-cell {
+  grid-column: 1 / -1;
+}
+
 .work-label {
   font-family: var(--font-display);
   font-size: 48px;

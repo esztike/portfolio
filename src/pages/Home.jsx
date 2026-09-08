@@ -73,6 +73,7 @@ function Home() {
       tags: ["UX", "AI", "DEV"],
       image: "/case-studies/error-series/hero.png",
       path: "/work/error-series",
+      featured: true,
     },
     {
       title: "Shared language",
@@ -139,6 +140,7 @@ function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, margin: "-80px" }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
+            className={project.featured ? "featured-cell" : undefined}
           >
             {project.comingSoon ? (
               <div
