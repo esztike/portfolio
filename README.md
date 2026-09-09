@@ -23,6 +23,7 @@ When I started my UX career, Webflow seemed like the right choice to showcase my
 
 - Case study content lives in MDX. A templated CMS layout would force every case study into one shape. Chunking components let each case study's layout follow its own story, living on its own route. As for what components could be shared, that was a decision before writing any code.
 - Design tokens (`tokens.css`) centralize the site's color, spacing and type values in one location, the same way a design system does in Figma. Translating that logic into code was one of the most exciting parts of building this project.
+- Per-route metadata is handled with static defaults and an edge middleware that rewrites `<head>` tags per route. Full reasoning in the [write-up](docs/head-metadata.md).
 
 ## Status
 
