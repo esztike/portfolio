@@ -14,7 +14,7 @@ The setup has a noteworthy catch. Anything that reads a page without running Jav
 
   **What it is.** The `<head>` block that ships with the build. Alongside the usual charset, viewport and icon links, it carries the site's identity tags, an Open Graph and Twitter Card block for link previews, and a Person structured data block.
 
-  **What it is for.** A baseline, where every route starts from. The homepage uses it as is. For every other route, the request-time middleware overwrites it tag by tag.
+  **What it is for.** A baseline, where every route starts from. The homepage uses it as is. For every linked route, the request-time middleware overwrites it tag by tag.
 
   **When it runs.** Build time. It is written into the file, and Vite carries the file into the build output as the app's entry point.
 
