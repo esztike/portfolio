@@ -24,9 +24,12 @@ const handleAccordionContentAnimationEnd = (event, tabValue) => {
     event.animationName === "walkthrough-accordion-slide-down" &&
     tabValue === accordionValue
   ) {
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
     triggerRefs.current[tabValue]?.scrollIntoView({
       block: "start",
-      behavior: "smooth",
+      behavior: reduceMotion ? "auto" : "smooth",
     });
   }
 };`;
@@ -52,7 +55,7 @@ function CodeLab() {
       />
       <ShowcaseCard
         title="scroll snap"
-        story="From Sofia Error Series microsite. When a walkthrough card opens, this waits for the animation to finish, then snaps the card's header to the top of the viewport so the reader's eyes land where they expect."
+        story="From Sofia Error Series microsite. When a walkthrough card opens, this waits for the animation to finish, then snaps the card's header to the top of the viewport so the reader's eyes land where they expect. With reduced motion on, it jumps instead of gliding."
         githubUrl="https://github.com/esztike/sofia-error-series"
         liveUrl="https://sofia-error-series.vercel.app/"
         snippet={sofiaSnippet}
