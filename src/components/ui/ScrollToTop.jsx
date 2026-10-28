@@ -34,7 +34,11 @@ function ScrollToTop() {
   if (!visible) return null;
 
   return createPortal(
-    <button className="scroll-to-top" onClick={scrollUp}>
+    <button
+      className="scroll-to-top"
+      onClick={scrollUp}
+      aria-label="back to top"
+    >
       <ArrowUp size={18} />
     </button>,
     document.body,
