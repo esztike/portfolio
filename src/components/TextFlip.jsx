@@ -7,14 +7,19 @@ import "./TextFlip.css";
 const words = ["ようこそ", "welcome", "bienvenue", "benvenuta", "üdvözöllek"];
 
 function TextFlip() {
-  const [index, setIndex] = useState(0);
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  const [index, setIndex] = useState(reduceMotion ? 1 : 0);
 
   useEffect(() => {
+    if (reduceMotion) return;
+
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
     }, 2000);
     return () => clearInterval(timer);
-  }, []);
+  }, [reduceMotion]);
 
   return (
     <div className="textflip-wrapper">

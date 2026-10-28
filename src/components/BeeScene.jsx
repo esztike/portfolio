@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { useAnimation, useInView } from "framer-motion";
+import { useAnimation, useInView, useReducedMotion } from "framer-motion";
 import "./BeeScene.css";
 
 function BeeScene({ replay = 0 }) {
@@ -10,6 +10,7 @@ function BeeScene({ replay = 0 }) {
   const controls = useAnimation();
   const daisyControls = useAnimation();
   const daisyRef = useRef(null);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     const containerWidth = ref.current.getBoundingClientRect().width;
@@ -18,6 +19,12 @@ function BeeScene({ replay = 0 }) {
     controls.set({ x: containerWidth, y: 0 });
 
     if (!isInView) return;
+
+    if (reduceMotion) {
+      controls.set({ x: beeX, y: 0, opacity: 0 });
+      controls.start({ opacity: 1, transition: { duration: 0.6 } });
+      return;
+    }
 
     const animate = async () => {
       await controls.start({
@@ -47,7 +54,7 @@ function BeeScene({ replay = 0 }) {
     };
 
     animate();
-  }, [isInView, controls, daisyControls, replay]);
+  }, [isInView, controls, daisyControls, replay, reduceMotion]);
 
   return (
     <div className="bee-scene" ref={ref} aria-hidden="true">

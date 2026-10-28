@@ -24,7 +24,12 @@ function ScrollToTop() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollUp = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollUp = () => {
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  };
 
   if (!visible) return null;
 

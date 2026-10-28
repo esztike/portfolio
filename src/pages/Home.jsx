@@ -11,6 +11,13 @@ function Home() {
     const el = headlineRef.current;
     const pairs = ["Research", "Code", "Deploy"];
     const prefix = "Design × ";
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (reduceMotion) {
+      el.textContent = prefix + pairs.join(" · ");
+      return;
+    }
     let pairIndex = 0;
     let charIndex = 0;
     let deleting = false;
